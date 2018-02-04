@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="BonaDataset" targetNamespace="http://tempuri.org/BonaDataset.xsd" xmlns:mstns="http://tempuri.org/BonaDataset.xsd" xmlns="http://tempuri.org/BonaDataset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="GetConn" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="GetConn (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.GetConn.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="BonaDataset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="BonaDataset" msprop:Generator_UserDSName="BonaDataset">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vw_rpt_partner_aging_hutang" msprop:Generator_TableClassName="vw_rpt_partner_aging_hutangDataTable" msprop:Generator_TableVarName="tablevw_rpt_partner_aging_hutang" msprop:Generator_TablePropName="vw_rpt_partner_aging_hutang" msprop:Generator_RowDeletingName="vw_rpt_partner_aging_hutangRowDeleting" msprop:Generator_RowChangingName="vw_rpt_partner_aging_hutangRowChanging" msprop:Generator_RowEvHandlerName="vw_rpt_partner_aging_hutangRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_rpt_partner_aging_hutangRowDeleted" msprop:Generator_UserTableName="vw_rpt_partner_aging_hutang" msprop:Generator_RowChangedName="vw_rpt_partner_aging_hutangRowChanged" msprop:Generator_RowEvArgName="vw_rpt_partner_aging_hutangRowChangeEvent" msprop:Generator_RowClassName="vw_rpt_partner_aging_hutangRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Tgl_x0020_Trans" msprop:Generator_ColumnVarNameInTable="columnTgl_Trans" msprop:Generator_ColumnPropNameInRow="Tgl_Trans" msprop:Generator_ColumnPropNameInTable="Tgl_TransColumn" msprop:Generator_UserColumnName="Tgl Trans" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Partner_x0020_ID" msprop:Generator_ColumnVarNameInTable="columnPartner_ID" msprop:Generator_ColumnPropNameInRow="Partner_ID" msprop:Generator_ColumnPropNameInTable="Partner_IDColumn" msprop:Generator_UserColumnName="Partner ID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Tipe_x0020_Invoice" msprop:Generator_ColumnVarNameInTable="columnTipe_Invoice" msprop:Generator_ColumnPropNameInRow="Tipe_Invoice" msprop:Generator_ColumnPropNameInTable="Tipe_InvoiceColumn" msprop:Generator_UserColumnName="Tipe Invoice" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Supplier" msprop:Generator_ColumnVarNameInTable="columnSupplier" msprop:Generator_ColumnPropNameInRow="Supplier" msprop:Generator_ColumnPropNameInTable="SupplierColumn" msprop:Generator_UserColumnName="Supplier" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="No_x0020_Bukti" msprop:Generator_ColumnVarNameInTable="columnNo_Bukti" msprop:Generator_ColumnPropNameInRow="No_Bukti" msprop:Generator_ColumnPropNameInTable="No_BuktiColumn" msprop:Generator_UserColumnName="No Bukti" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="No_x0020_Ref" msprop:Generator_ColumnVarNameInTable="columnNo_Ref" msprop:Generator_ColumnPropNameInRow="No_Ref" msprop:Generator_ColumnPropNameInTable="No_RefColumn" msprop:Generator_UserColumnName="No Ref" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Tipe_x0020_Partner" msprop:Generator_ColumnVarNameInTable="columnTipe_Partner" msprop:Generator_ColumnPropNameInRow="Tipe_Partner" msprop:Generator_ColumnPropNameInTable="Tipe_PartnerColumn" msprop:Generator_UserColumnName="Tipe Partner" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Harga" msprop:Generator_ColumnVarNameInTable="columnHarga" msprop:Generator_ColumnPropNameInRow="Harga" msprop:Generator_ColumnPropNameInTable="HargaColumn" msprop:Generator_UserColumnName="Harga" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Tgl_x0020_Jatuh_x0020_Tempo" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTgl_Jatuh_Tempo" msprop:Generator_ColumnPropNameInRow="Tgl_Jatuh_Tempo" msprop:Generator_ColumnPropNameInTable="Tgl_Jatuh_TempoColumn" msprop:Generator_UserColumnName="Tgl Jatuh Tempo" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TypeTrans" msprop:Generator_ColumnVarNameInTable="columnTypeTrans" msprop:Generator_ColumnPropNameInRow="TypeTrans" msprop:Generator_ColumnPropNameInTable="TypeTransColumn" msprop:Generator_UserColumnName="TypeTrans" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="term_days" msprop:Generator_ColumnVarNameInTable="columnterm_days" msprop:Generator_ColumnPropNameInRow="term_days" msprop:Generator_ColumnPropNameInTable="term_daysColumn" msprop:Generator_UserColumnName="term_days" type="xs:int" minOccurs="0" />
+              <xs:element name="reminder_days" msprop:Generator_ColumnVarNameInTable="columnreminder_days" msprop:Generator_ColumnPropNameInRow="reminder_days" msprop:Generator_ColumnPropNameInTable="reminder_daysColumn" msprop:Generator_UserColumnName="reminder_days" type="xs:int" minOccurs="0" />
+              <xs:element name="Batas_x0020_Bayar" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBatas_Bayar" msprop:Generator_ColumnPropNameInRow="Batas_Bayar" msprop:Generator_ColumnPropNameInTable="Batas_BayarColumn" msprop:Generator_UserColumnName="Batas Bayar" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Reminder_x0020_Bayar" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnReminder_Bayar" msprop:Generator_ColumnPropNameInRow="Reminder_Bayar" msprop:Generator_ColumnPropNameInTable="Reminder_BayarColumn" msprop:Generator_UserColumnName="Reminder Bayar" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DateTrans" msprop:Generator_ColumnVarNameInTable="columnDateTrans" msprop:Generator_ColumnPropNameInRow="DateTrans" msprop:Generator_ColumnPropNameInTable="DateTransColumn" msprop:Generator_UserColumnName="DateTrans" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="aging_piutang" msprop:Generator_TableClassName="aging_piutangDataTable" msprop:Generator_TableVarName="tableaging_piutang" msprop:Generator_RowChangedName="aging_piutangRowChanged" msprop:Generator_TablePropName="aging_piutang" msprop:Generator_RowDeletingName="aging_piutangRowDeleting" msprop:Generator_RowChangingName="aging_piutangRowChanging" msprop:Generator_RowEvHandlerName="aging_piutangRowChangeEventHandler" msprop:Generator_RowDeletedName="aging_piutangRowDeleted" msprop:Generator_RowClassName="aging_piutangRow" msprop:Generator_UserTableName="aging_piutang" msprop:Generator_RowEvArgName="aging_piutangRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Tgl_x0020_Trans" msprop:Generator_ColumnVarNameInTable="columnTgl_Trans" msprop:Generator_ColumnPropNameInRow="Tgl_Trans" msprop:Generator_ColumnPropNameInTable="Tgl_TransColumn" msprop:Generator_UserColumnName="Tgl Trans" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Partner_x0020_ID" msprop:Generator_ColumnVarNameInTable="columnPartner_ID" msprop:Generator_ColumnPropNameInRow="Partner_ID" msprop:Generator_ColumnPropNameInTable="Partner_IDColumn" msprop:Generator_UserColumnName="Partner ID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Tipe_x0020_Invoice" msprop:Generator_ColumnVarNameInTable="columnTipe_Invoice" msprop:Generator_ColumnPropNameInRow="Tipe_Invoice" msprop:Generator_ColumnPropNameInTable="Tipe_InvoiceColumn" msprop:Generator_UserColumnName="Tipe Invoice" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Customer" msprop:Generator_ColumnVarNameInTable="columnCustomer" msprop:Generator_ColumnPropNameInRow="Customer" msprop:Generator_ColumnPropNameInTable="CustomerColumn" msprop:Generator_UserColumnName="Customer" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="No_x0020_Bukti" msprop:Generator_ColumnVarNameInTable="columnNo_Bukti" msprop:Generator_ColumnPropNameInRow="No_Bukti" msprop:Generator_ColumnPropNameInTable="No_BuktiColumn" msprop:Generator_UserColumnName="No Bukti" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="No_x0020_Ref" msprop:Generator_ColumnVarNameInTable="columnNo_Ref" msprop:Generator_ColumnPropNameInRow="No_Ref" msprop:Generator_ColumnPropNameInTable="No_RefColumn" msprop:Generator_UserColumnName="No Ref" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Tipe_x0020_Partner" msprop:Generator_ColumnVarNameInTable="columnTipe_Partner" msprop:Generator_ColumnPropNameInRow="Tipe_Partner" msprop:Generator_ColumnPropNameInTable="Tipe_PartnerColumn" msprop:Generator_UserColumnName="Tipe Partner" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Harga" msprop:Generator_ColumnVarNameInTable="columnHarga" msprop:Generator_ColumnPropNameInRow="Harga" msprop:Generator_ColumnPropNameInTable="HargaColumn" msprop:Generator_UserColumnName="Harga" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Tgl_x0020_Jatuh_x0020_Tempo" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTgl_Jatuh_Tempo" msprop:Generator_ColumnPropNameInRow="Tgl_Jatuh_Tempo" msprop:Generator_ColumnPropNameInTable="Tgl_Jatuh_TempoColumn" msprop:Generator_UserColumnName="Tgl Jatuh Tempo" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TypeTrans" msprop:Generator_ColumnVarNameInTable="columnTypeTrans" msprop:Generator_ColumnPropNameInRow="TypeTrans" msprop:Generator_ColumnPropNameInTable="TypeTransColumn" msprop:Generator_UserColumnName="TypeTrans" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="term_days" msprop:Generator_ColumnVarNameInTable="columnterm_days" msprop:Generator_ColumnPropNameInRow="term_days" msprop:Generator_ColumnPropNameInTable="term_daysColumn" msprop:Generator_UserColumnName="term_days" type="xs:int" minOccurs="0" />
+              <xs:element name="reminder_days" msprop:Generator_ColumnVarNameInTable="columnreminder_days" msprop:Generator_ColumnPropNameInRow="reminder_days" msprop:Generator_ColumnPropNameInTable="reminder_daysColumn" msprop:Generator_UserColumnName="reminder_days" type="xs:int" minOccurs="0" />
+              <xs:element name="Batas_x0020_Bayar" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBatas_Bayar" msprop:Generator_ColumnPropNameInRow="Batas_Bayar" msprop:Generator_ColumnPropNameInTable="Batas_BayarColumn" msprop:Generator_UserColumnName="Batas Bayar" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Reminder_x0020_Bayar" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnReminder_Bayar" msprop:Generator_ColumnPropNameInRow="Reminder_Bayar" msprop:Generator_ColumnPropNameInTable="Reminder_BayarColumn" msprop:Generator_UserColumnName="Reminder Bayar" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DateTrans" msprop:Generator_ColumnVarNameInTable="columnDateTrans" msprop:Generator_ColumnPropNameInRow="DateTrans" msprop:Generator_ColumnPropNameInTable="DateTransColumn" msprop:Generator_UserColumnName="DateTrans" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="no_invoice" msprop:Generator_ColumnVarNameInTable="columnno_invoice" msprop:Generator_ColumnPropNameInRow="no_invoice" msprop:Generator_ColumnPropNameInTable="no_invoiceColumn" msprop:Generator_UserColumnName="no_invoice" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="no_kwitansi" msprop:Generator_ColumnVarNameInTable="columnno_kwitansi" msprop:Generator_ColumnPropNameInRow="no_kwitansi" msprop:Generator_ColumnPropNameInTable="no_kwitansiColumn" msprop:Generator_UserColumnName="no_kwitansi" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AgingPiutangRekapPeriod" msprop:Generator_TableClassName="AgingPiutangRekapPeriodDataTable" msprop:Generator_TableVarName="tableAgingPiutangRekapPeriod" msprop:Generator_TablePropName="AgingPiutangRekapPeriod" msprop:Generator_RowDeletingName="AgingPiutangRekapPeriodRowDeleting" msprop:Generator_RowChangingName="AgingPiutangRekapPeriodRowChanging" msprop:Generator_RowEvHandlerName="AgingPiutangRekapPeriodRowChangeEventHandler" msprop:Generator_RowDeletedName="AgingPiutangRekapPeriodRowDeleted" msprop:Generator_UserTableName="AgingPiutangRekapPeriod" msprop:Generator_RowChangedName="AgingPiutangRekapPeriodRowChanged" msprop:Generator_RowEvArgName="AgingPiutangRekapPeriodRowChangeEvent" msprop:Generator_RowClassName="AgingPiutangRekapPeriodRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Tgl_x0020_Trans" msprop:Generator_ColumnVarNameInTable="columnTgl_Trans" msprop:Generator_ColumnPropNameInRow="Tgl_Trans" msprop:Generator_ColumnPropNameInTable="Tgl_TransColumn" msprop:Generator_UserColumnName="Tgl Trans" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Partner_x0020_ID" msprop:Generator_ColumnVarNameInTable="columnPartner_ID" msprop:Generator_ColumnPropNameInRow="Partner_ID" msprop:Generator_ColumnPropNameInTable="Partner_IDColumn" msprop:Generator_UserColumnName="Partner ID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Tipe_x0020_Invoice" msprop:Generator_ColumnVarNameInTable="columnTipe_Invoice" msprop:Generator_ColumnPropNameInRow="Tipe_Invoice" msprop:Generator_ColumnPropNameInTable="Tipe_InvoiceColumn" msprop:Generator_UserColumnName="Tipe Invoice" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Customer" msprop:Generator_ColumnVarNameInTable="columnCustomer" msprop:Generator_ColumnPropNameInRow="Customer" msprop:Generator_ColumnPropNameInTable="CustomerColumn" msprop:Generator_UserColumnName="Customer" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="No_x0020_Bukti" msprop:Generator_ColumnVarNameInTable="columnNo_Bukti" msprop:Generator_ColumnPropNameInRow="No_Bukti" msprop:Generator_ColumnPropNameInTable="No_BuktiColumn" msprop:Generator_UserColumnName="No Bukti" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="No_x0020_Ref" msprop:Generator_ColumnVarNameInTable="columnNo_Ref" msprop:Generator_ColumnPropNameInRow="No_Ref" msprop:Generator_ColumnPropNameInTable="No_RefColumn" msprop:Generator_UserColumnName="No Ref" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Tipe_x0020_Partner" msprop:Generator_ColumnVarNameInTable="columnTipe_Partner" msprop:Generator_ColumnPropNameInRow="Tipe_Partner" msprop:Generator_ColumnPropNameInTable="Tipe_PartnerColumn" msprop:Generator_UserColumnName="Tipe Partner" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Harga" msprop:Generator_ColumnVarNameInTable="columnHarga" msprop:Generator_ColumnPropNameInRow="Harga" msprop:Generator_ColumnPropNameInTable="HargaColumn" msprop:Generator_UserColumnName="Harga" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Tgl_x0020_Jatuh_x0020_Tempo" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTgl_Jatuh_Tempo" msprop:Generator_ColumnPropNameInRow="Tgl_Jatuh_Tempo" msprop:Generator_ColumnPropNameInTable="Tgl_Jatuh_TempoColumn" msprop:Generator_UserColumnName="Tgl Jatuh Tempo" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TypeTrans" msprop:Generator_ColumnVarNameInTable="columnTypeTrans" msprop:Generator_ColumnPropNameInRow="TypeTrans" msprop:Generator_ColumnPropNameInTable="TypeTransColumn" msprop:Generator_UserColumnName="TypeTrans" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="term_days" msprop:Generator_ColumnVarNameInTable="columnterm_days" msprop:Generator_ColumnPropNameInRow="term_days" msprop:Generator_ColumnPropNameInTable="term_daysColumn" msprop:Generator_UserColumnName="term_days" type="xs:int" minOccurs="0" />
+              <xs:element name="reminder_days" msprop:Generator_ColumnVarNameInTable="columnreminder_days" msprop:Generator_ColumnPropNameInRow="reminder_days" msprop:Generator_ColumnPropNameInTable="reminder_daysColumn" msprop:Generator_UserColumnName="reminder_days" type="xs:int" minOccurs="0" />
+              <xs:element name="Batas_x0020_Bayar" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBatas_Bayar" msprop:Generator_ColumnPropNameInRow="Batas_Bayar" msprop:Generator_ColumnPropNameInTable="Batas_BayarColumn" msprop:Generator_UserColumnName="Batas Bayar" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Reminder_x0020_Bayar" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnReminder_Bayar" msprop:Generator_ColumnPropNameInRow="Reminder_Bayar" msprop:Generator_ColumnPropNameInTable="Reminder_BayarColumn" msprop:Generator_UserColumnName="Reminder Bayar" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DateTrans" msprop:Generator_ColumnVarNameInTable="columnDateTrans" msprop:Generator_ColumnPropNameInRow="DateTrans" msprop:Generator_ColumnPropNameInTable="DateTransColumn" msprop:Generator_UserColumnName="DateTrans" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="no_invoice" msprop:Generator_ColumnVarNameInTable="columnno_invoice" msprop:Generator_ColumnPropNameInRow="no_invoice" msprop:Generator_ColumnPropNameInTable="no_invoiceColumn" msprop:Generator_UserColumnName="no_invoice" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="no_kwitansi" msprop:Generator_ColumnVarNameInTable="columnno_kwitansi" msprop:Generator_ColumnPropNameInRow="no_kwitansi" msprop:Generator_ColumnPropNameInTable="no_kwitansiColumn" msprop:Generator_UserColumnName="no_kwitansi" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="current_year" msprop:Generator_ColumnVarNameInTable="columncurrent_year" msprop:Generator_ColumnPropNameInRow="current_year" msprop:Generator_ColumnPropNameInTable="current_yearColumn" msprop:Generator_UserColumnName="current_year" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="begin_date" msprop:Generator_ColumnVarNameInTable="columnbegin_date" msprop:Generator_ColumnPropNameInRow="begin_date" msprop:Generator_ColumnPropNameInTable="begin_dateColumn" msprop:Generator_UserColumnName="begin_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="end_date" msprop:Generator_ColumnVarNameInTable="columnend_date" msprop:Generator_ColumnPropNameInRow="end_date" msprop:Generator_ColumnPropNameInTable="end_dateColumn" msprop:Generator_UserColumnName="end_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Periode" msprop:Generator_ColumnVarNameInTable="columnPeriode" msprop:Generator_ColumnPropNameInRow="Periode" msprop:Generator_ColumnPropNameInTable="PeriodeColumn" msprop:Generator_UserColumnName="Periode" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Bukti_x0020_BBK" msprop:Generator_TableClassName="Bukti_BBKDataTable" msprop:Generator_TableVarName="tableBukti_BBK" msprop:Generator_TablePropName="Bukti_BBK" msprop:Generator_RowDeletingName="Bukti_BBKRowDeleting" msprop:Generator_RowChangingName="Bukti_BBKRowChanging" msprop:Generator_RowEvHandlerName="Bukti_BBKRowChangeEventHandler" msprop:Generator_RowDeletedName="Bukti_BBKRowDeleted" msprop:Generator_UserTableName="Bukti BBK" msprop:Generator_RowChangedName="Bukti_BBKRowChanged" msprop:Generator_RowEvArgName="Bukti_BBKRowChangeEvent" msprop:Generator_RowClassName="Bukti_BBKRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Tanggal_x0020_Bukti" msprop:Generator_ColumnVarNameInTable="columnTanggal_Bukti" msprop:Generator_ColumnPropNameInRow="Tanggal_Bukti" msprop:Generator_ColumnPropNameInTable="Tanggal_BuktiColumn" msprop:Generator_UserColumnName="Tanggal Bukti" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="No_x0020_Bukti" msprop:Generator_ColumnVarNameInTable="columnNo_Bukti" msprop:Generator_ColumnPropNameInRow="No_Bukti" msprop:Generator_ColumnPropNameInTable="No_BuktiColumn" msprop:Generator_UserColumnName="No Bukti">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Kode_x0020_Kas" msprop:Generator_ColumnVarNameInTable="columnKode_Kas" msprop:Generator_ColumnPropNameInRow="Kode_Kas" msprop:Generator_ColumnPropNameInTable="Kode_KasColumn" msprop:Generator_UserColumnName="Kode Kas" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nama_x0020_Kas" msprop:Generator_ColumnVarNameInTable="columnNama_Kas" msprop:Generator_ColumnPropNameInRow="Nama_Kas" msprop:Generator_ColumnPropNameInTable="Nama_KasColumn" msprop:Generator_UserColumnName="Nama Kas" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="No_x0020_Akun" msprop:Generator_ColumnVarNameInTable="columnNo_Akun" msprop:Generator_ColumnPropNameInRow="No_Akun" msprop:Generator_ColumnPropNameInTable="No_AkunColumn" msprop:Generator_UserColumnName="No Akun" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nama_x0020_Akun" msprop:Generator_ColumnVarNameInTable="columnNama_Akun" msprop:Generator_ColumnPropNameInRow="Nama_Akun" msprop:Generator_ColumnPropNameInTable="Nama_AkunColumn" msprop:Generator_UserColumnName="Nama Akun" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Keterangan2" msprop:Generator_ColumnVarNameInTable="columnKeterangan2" msprop:Generator_ColumnPropNameInRow="Keterangan2" msprop:Generator_ColumnPropNameInTable="Keterangan2Column" msprop:Generator_UserColumnName="Keterangan2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ref_doc" msprop:Generator_ColumnVarNameInTable="columnref_doc" msprop:Generator_ColumnPropNameInRow="ref_doc" msprop:Generator_ColumnPropNameInTable="ref_docColumn" msprop:Generator_UserColumnName="ref_doc" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Debet" msprop:Generator_ColumnVarNameInTable="columnDebet" msprop:Generator_ColumnPropNameInRow="Debet" msprop:Generator_ColumnPropNameInTable="DebetColumn" msprop:Generator_UserColumnName="Debet" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Periode" msprop:Generator_ColumnVarNameInTable="columnPeriode" msprop:Generator_ColumnPropNameInRow="Periode" msprop:Generator_ColumnPropNameInTable="PeriodeColumn" msprop:Generator_UserColumnName="Periode" type="xs:int" minOccurs="0" />
+              <xs:element name="Keterangan" msprop:Generator_ColumnVarNameInTable="columnKeterangan" msprop:Generator_ColumnPropNameInRow="Keterangan" msprop:Generator_ColumnPropNameInTable="KeteranganColumn" msprop:Generator_UserColumnName="Keterangan" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="no_cheque" msprop:Generator_ColumnVarNameInTable="columnno_cheque" msprop:Generator_ColumnPropNameInRow="no_cheque" msprop:Generator_ColumnPropNameInTable="no_chequeColumn" msprop:Generator_UserColumnName="no_cheque" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="project_id" msprop:Generator_ColumnVarNameInTable="columnproject_id" msprop:Generator_ColumnPropNameInRow="project_id" msprop:Generator_ColumnPropNameInTable="project_idColumn" msprop:Generator_UserColumnName="project_id" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="project_name" msprop:Generator_ColumnVarNameInTable="columnproject_name" msprop:Generator_ColumnPropNameInRow="project_name" msprop:Generator_ColumnPropNameInTable="project_nameColumn" msprop:Generator_UserColumnName="project_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Bukti_x0020_BBK" />
+      <xs:field xpath="mstns:No_x0020_Bukti" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
