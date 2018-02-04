@@ -11,25 +11,17 @@ using report_manajemen.Report;
 
 namespace report_manajemen.WebForm
 {
-    public partial class frmLaporanPerkiraan : System.Web.UI.Page
+    public partial class frmLaporanAgingPiutang : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            //CrystalReportViewer1.ToolPanelView = CrystalDecisions.Web.ToolPanelViewType.None;
-            //LaporanPerkiraan crystalReport = new LaporanPerkiraan();
-            //DataSet ds = new DataSet();
-            //Global_Acess repo = new Global_Acess();
-            //ds = repo.LaporanPerkiraan();
-            //crystalReport.SetDataSource(ds);
-            //CrystalReportViewer1.ReportSource = crystalReport;
-            //CrystalReportViewer1.RefreshReport();
             try
             {
                 bool isValid = true;
 
                 // Setting ReportName
                 string strReportName = System.Web.HttpContext.Current.Session["ReportName"].ToString();
+                string rptCustomerName = System.Web.HttpContext.Current.Session["rptCustomerName"].ToString();
                 // Setting Report Data Source     
                 var rptSource = System.Web.HttpContext.Current.Session["rptSource"];
 
@@ -50,16 +42,13 @@ namespace report_manajemen.WebForm
                     if (rptSource != null && rptSource.GetType().ToString() != "System.String")
                         rd.SetDataSource(rptSource);
 
-                    //if (!string.IsNullOrEmpty(strFromDate))
-                    //    rd.SetParameterValue("fromDate", strFromDate);
-                    //if (!string.IsNullOrEmpty(strToDate))
-                    //    rd.SetParameterValue("toDate", strFromDate);
+                    if (!string.IsNullOrEmpty(rptCustomerName))
+                        rd.SetParameterValue("customer", rptCustomerName);
                     CrystalReportViewer1.ReportSource = rd;
 
 
                     Session["ReportName"] = "";
-                    Session["rptFromDate"] = "";
-                    Session["rptToDate"] = "";
+                    Session["rptCustomerName"] = "";
                     Session["rptSource"] = "";
                 }
                 else
@@ -71,6 +60,7 @@ namespace report_manajemen.WebForm
             {
                 Response.Write(ex.ToString());
             }
+
         }
     }
 }

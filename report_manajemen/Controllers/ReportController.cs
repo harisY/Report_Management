@@ -34,5 +34,38 @@ namespace report_manajemen.Controllers
             Response.Redirect("~/WebForm/frmLaporanPerkiraan.aspx");
 
         }
+
+        public ActionResult IndexLaporanAgingPiutang()
+        {
+            return View();
+        }
+
+
+
+        [HttpPost]
+        public void ShowLaporanAgingPiutang(string txtCustomerName)
+        {
+            Global_Acess global = new Global_Acess();
+            // Setting session for generating report
+            this.HttpContext.Session["ReportName"] = "AgingPiutang.rpt";
+            this.HttpContext.Session["rptCustomerName"] = txtCustomerName;
+            //this.HttpContext.Session["rptToDate"] = txtToDate;
+            this.HttpContext.Session["rptSource"] = global.LaporanAgingPiutang(txtCustomerName);
+            // Redirecting generic report viewer page from action
+            Response.Redirect("~/WebForm/frmLaporanAgingPiutang.aspx");
+
+        }
+
+        public void ShowLaporanAgingPiutangNewWin(string txtCustomerName)
+        {
+            Global_Acess global = new Global_Acess();
+            // Setting session for generating report
+            this.HttpContext.Session["ReportName"] = "AgingPiutang.rpt";
+            this.HttpContext.Session["rptCustomerName"] = txtCustomerName;
+            //this.HttpContext.Session["rptToDate"] = txtToDate;
+            this.HttpContext.Session["rptSource"] = global.LaporanAgingPiutang(txtCustomerName);
+            // Redirecting generic report viewer page from action
+
+        }
     }
 }

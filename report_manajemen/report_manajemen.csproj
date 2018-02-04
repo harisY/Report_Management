@@ -326,6 +326,13 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="WebForm\frmLaporanAgingPiutang.aspx.cs">
+      <DependentUpon>frmLaporanAgingPiutang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\frmLaporanAgingPiutang.aspx.designer.cs">
+      <DependentUpon>frmLaporanAgingPiutang.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WebForm\frmLaporanPerkiraan.aspx.cs">
       <DependentUpon>frmLaporanPerkiraan.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -374,9 +381,10 @@
     <Content Include="Dataset\BonaDataset.xsc">
       <DependentUpon>BonaDataset.xsd</DependentUpon>
     </Content>
+    <Content Include="WebForm\frmLaporanAgingPiutang.aspx" />
+    <Content Include="WebForm\frmLaporanPerkiraan.aspx" />
     <Content Include="crystalreportviewers13\crsmarttag.jsp" />
     <Content Include="crystalreportviewers13\preview.jsp" />
-    <Content Include="WebForm\frmLaporanPerkiraan.aspx" />
     <None Include="Dataset\BonaDataset.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -432,6 +440,7 @@
     <Content Include="Views\Report\Report.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Report\IndexLaporanPerkiraan.cshtml" />
+    <Content Include="Views\Report\IndexLaporanAgingPiutang.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -590,7 +599,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>3360</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>

@@ -69,6 +69,39 @@ namespace report_manajemen.DAL
             }
         }
 
+        public DataSet LaporanAgingPiutang(string customerName)
+        {
+            try
+            {
+                BonaDataset ds = new BonaDataset();
+                string query = @"SELECT [Tgl Trans]
+                                          ,[Partner ID]
+                                          ,[Tipe Invoice]
+                                          ,[Customer]
+                                          ,[No Bukti]
+                                          ,[No Ref]
+                                          ,[Tipe Partner]
+                                          ,[Harga]
+                                          ,[Tgl Jatuh Tempo]
+                                          ,[TypeTrans]
+                                          ,[term_days]
+                                          ,[reminder_days]
+                                          ,[Batas Bayar]
+                                          ,[Reminder Bayar]
+                                          ,[DateTrans]
+                                          ,[no_invoice]
+                                          ,[no_kwitansi]
+                                          FROM [CosmicDB_Cargo].[dbo].[vw_rpt_partner_aging_piutang] where Customer = '" + customerName + "'";
+                ds = GetDataSet(query, "aging_piutang");
+                return ds;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
     }
 
     public class TransactionHelper
