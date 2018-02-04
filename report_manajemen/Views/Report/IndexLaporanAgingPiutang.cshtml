@@ -7,12 +7,13 @@
          var oParam = { "txtCustomerName": ""};
          oParam.txtCustomerName = $("#txtcustomer").val();
          $.ajax({
-             url: '../../Report/ShowLaporanAgingPiutang',
+             url : '../../Report/ShowLaporanAgingPiutangNewWin',
              data: JSON.stringify(oParam),
              type: 'POST',
              contentType: 'application/json;',
              dataType: 'json',
              success: function () {
+                 //alert("tes")
                  window.open("../WebForm/frmLaporanAgingPiutang.aspx", 'mywindow', 'fullscreen=yes, scrollbars=auto');
              }
          });
@@ -24,6 +25,6 @@
 <div class="form-group">
     <label for="usr">Customer:</label>
     <input type="text" class="form-control" id="txtcustomer"><br />
-    <input type="button" value="Show Generic in New Window" onclick="GenericInNewWin()" />
+    <input type="button" value="Show Report" onclick="GenericInNewWin()" />
 </div>
 

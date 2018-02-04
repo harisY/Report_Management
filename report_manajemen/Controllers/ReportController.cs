@@ -55,5 +55,6 @@ namespace report_manajemen.Controllers
             Response.Redirect("~/WebForm/frmLaporanAgingPiutang.aspx");
 
         }
+       
     }
 }
