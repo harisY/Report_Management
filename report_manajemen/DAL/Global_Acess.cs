@@ -20,7 +20,7 @@ namespace report_manajemen.DAL
             //con = new SqlConnection(constr);
 
         }
-        public static BonaDataset GetDataSet(string pQuery, int pTimeOut = 30)
+        public static BonaDataset GetDataSet(string pQuery,string dt, int pTimeOut = 30)
         {
             SqlDataAdapter da = null;
             BonaDataset dsa = new BonaDataset();
@@ -41,7 +41,7 @@ namespace report_manajemen.DAL
                         conn.ConnectionString = Connection();
                         conn.Open();
                         da = new SqlDataAdapter(pQuery, conn);
-                        da.Fill(dsa);
+                        da.Fill(dsa,dt);
                     }
                 }
                 da = null;
@@ -50,6 +50,55 @@ namespace report_manajemen.DAL
             catch (Exception ex)
             {
                 throw ex;
+            }
+        }
+        public DataSet LaporanPerkiraan()
+        {
+            try
+            {
+                BonaDataset ds = new BonaDataset();
+                string query = @"SELECT NoAccount AS [Kode Akun], AccountName AS [Nama Akun], Type AS [Tipe Akun], [Group] AS [Grup Akun], GroupAccount
+                                    FROM    dbo.GLAccount";
+                ds= GetDataSet(query, "Laporan_Perkiraan");
+                return ds;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public DataSet LaporanAgingPiutang(string customerName)
+        {
+            try
+            {
+                BonaDataset ds = new BonaDataset();
+                string query = @"SELECT [Tgl Trans]
+                                          ,[Partner ID]
+                                          ,[Tipe Invoice]
+                                          ,[Customer]
+                                          ,[No Bukti]
+                                          ,[No Ref]
+                                          ,[Tipe Partner]
+                                          ,[Harga]
+                                          ,[Tgl Jatuh Tempo]
+                                          ,[TypeTrans]
+                                          ,[term_days]
+                                          ,[reminder_days]
+                                          ,[Batas Bayar]
+                                          ,[Reminder Bayar]
+                                          ,[DateTrans]
+                                          ,[no_invoice]
+                                          ,[no_kwitansi]
+                                          FROM [CosmicDB_Cargo].[dbo].[vw_rpt_partner_aging_piutang] where Customer = '" + customerName + "'";
+                ds = GetDataSet(query, "aging_piutang");
+                return ds;
+            }
+            catch (Exception)
+            {
+
+                throw;
             }
         }
 

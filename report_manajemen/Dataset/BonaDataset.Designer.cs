@@ -32,6 +32,8 @@ namespace report_manajemen.Dataset {
         
         private Bukti_BBKDataTable tableBukti_BBK;
         
+        private Laporan_PerkiraanDataTable tableLaporan_Perkiraan;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -71,6 +73,9 @@ namespace report_manajemen.Dataset {
                 }
                 if ((ds.Tables["Bukti BBK"] != null)) {
                     base.Tables.Add(new Bukti_BBKDataTable(ds.Tables["Bukti BBK"]));
+                }
+                if ((ds.Tables["Laporan_Perkiraan"] != null)) {
+                    base.Tables.Add(new Laporan_PerkiraanDataTable(ds.Tables["Laporan_Perkiraan"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -127,6 +132,16 @@ namespace report_manajemen.Dataset {
         public Bukti_BBKDataTable Bukti_BBK {
             get {
                 return this.tableBukti_BBK;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public Laporan_PerkiraanDataTable Laporan_Perkiraan {
+            get {
+                return this.tableLaporan_Perkiraan;
             }
         }
         
@@ -209,6 +224,9 @@ namespace report_manajemen.Dataset {
                 if ((ds.Tables["Bukti BBK"] != null)) {
                     base.Tables.Add(new Bukti_BBKDataTable(ds.Tables["Bukti BBK"]));
                 }
+                if ((ds.Tables["Laporan_Perkiraan"] != null)) {
+                    base.Tables.Add(new Laporan_PerkiraanDataTable(ds.Tables["Laporan_Perkiraan"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -266,6 +284,12 @@ namespace report_manajemen.Dataset {
                     this.tableBukti_BBK.InitVars();
                 }
             }
+            this.tableLaporan_Perkiraan = ((Laporan_PerkiraanDataTable)(base.Tables["Laporan_Perkiraan"]));
+            if ((initTable == true)) {
+                if ((this.tableLaporan_Perkiraan != null)) {
+                    this.tableLaporan_Perkiraan.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -284,6 +308,8 @@ namespace report_manajemen.Dataset {
             base.Tables.Add(this.tableAgingPiutangRekapPeriod);
             this.tableBukti_BBK = new Bukti_BBKDataTable();
             base.Tables.Add(this.tableBukti_BBK);
+            this.tableLaporan_Perkiraan = new Laporan_PerkiraanDataTable();
+            base.Tables.Add(this.tableLaporan_Perkiraan);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -307,6 +333,12 @@ namespace report_manajemen.Dataset {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializeBukti_BBK() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeLaporan_Perkiraan() {
             return false;
         }
         
@@ -376,6 +408,9 @@ namespace report_manajemen.Dataset {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void Bukti_BBKRowChangeEventHandler(object sender, Bukti_BBKRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void Laporan_PerkiraanRowChangeEventHandler(object sender, Laporan_PerkiraanRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -2302,6 +2337,325 @@ namespace report_manajemen.Dataset {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "Bukti_BBKDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class Laporan_PerkiraanDataTable : global::System.Data.TypedTableBase<Laporan_PerkiraanRow> {
+            
+            private global::System.Data.DataColumn columnKode_Akun;
+            
+            private global::System.Data.DataColumn columnNama_Akun;
+            
+            private global::System.Data.DataColumn columnTipe_Akun;
+            
+            private global::System.Data.DataColumn columnGrup_Akun;
+            
+            private global::System.Data.DataColumn columnGroupAccount;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Laporan_PerkiraanDataTable() {
+                this.TableName = "Laporan_Perkiraan";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal Laporan_PerkiraanDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected Laporan_PerkiraanDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Kode_AkunColumn {
+                get {
+                    return this.columnKode_Akun;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Nama_AkunColumn {
+                get {
+                    return this.columnNama_Akun;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Tipe_AkunColumn {
+                get {
+                    return this.columnTipe_Akun;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Grup_AkunColumn {
+                get {
+                    return this.columnGrup_Akun;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn GroupAccountColumn {
+                get {
+                    return this.columnGroupAccount;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Laporan_PerkiraanRow this[int index] {
+                get {
+                    return ((Laporan_PerkiraanRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Laporan_PerkiraanRowChangeEventHandler Laporan_PerkiraanRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Laporan_PerkiraanRowChangeEventHandler Laporan_PerkiraanRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Laporan_PerkiraanRowChangeEventHandler Laporan_PerkiraanRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Laporan_PerkiraanRowChangeEventHandler Laporan_PerkiraanRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddLaporan_PerkiraanRow(Laporan_PerkiraanRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Laporan_PerkiraanRow AddLaporan_PerkiraanRow(string Kode_Akun, string Nama_Akun, string Tipe_Akun, string Grup_Akun, string GroupAccount) {
+                Laporan_PerkiraanRow rowLaporan_PerkiraanRow = ((Laporan_PerkiraanRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        Kode_Akun,
+                        Nama_Akun,
+                        Tipe_Akun,
+                        Grup_Akun,
+                        GroupAccount};
+                rowLaporan_PerkiraanRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowLaporan_PerkiraanRow);
+                return rowLaporan_PerkiraanRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Laporan_PerkiraanRow FindByKode_Akun(string Kode_Akun) {
+                return ((Laporan_PerkiraanRow)(this.Rows.Find(new object[] {
+                            Kode_Akun})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                Laporan_PerkiraanDataTable cln = ((Laporan_PerkiraanDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new Laporan_PerkiraanDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnKode_Akun = base.Columns["Kode Akun"];
+                this.columnNama_Akun = base.Columns["Nama Akun"];
+                this.columnTipe_Akun = base.Columns["Tipe Akun"];
+                this.columnGrup_Akun = base.Columns["Grup Akun"];
+                this.columnGroupAccount = base.Columns["GroupAccount"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnKode_Akun = new global::System.Data.DataColumn("Kode Akun", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKode_Akun);
+                this.columnNama_Akun = new global::System.Data.DataColumn("Nama Akun", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNama_Akun);
+                this.columnTipe_Akun = new global::System.Data.DataColumn("Tipe Akun", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTipe_Akun);
+                this.columnGrup_Akun = new global::System.Data.DataColumn("Grup Akun", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGrup_Akun);
+                this.columnGroupAccount = new global::System.Data.DataColumn("GroupAccount", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGroupAccount);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnKode_Akun}, true));
+                this.columnKode_Akun.AllowDBNull = false;
+                this.columnKode_Akun.Unique = true;
+                this.columnKode_Akun.MaxLength = 25;
+                this.columnNama_Akun.MaxLength = 100;
+                this.columnTipe_Akun.MaxLength = 50;
+                this.columnGrup_Akun.MaxLength = 20;
+                this.columnGroupAccount.MaxLength = 20;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Laporan_PerkiraanRow NewLaporan_PerkiraanRow() {
+                return ((Laporan_PerkiraanRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new Laporan_PerkiraanRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(Laporan_PerkiraanRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.Laporan_PerkiraanRowChanged != null)) {
+                    this.Laporan_PerkiraanRowChanged(this, new Laporan_PerkiraanRowChangeEvent(((Laporan_PerkiraanRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.Laporan_PerkiraanRowChanging != null)) {
+                    this.Laporan_PerkiraanRowChanging(this, new Laporan_PerkiraanRowChangeEvent(((Laporan_PerkiraanRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.Laporan_PerkiraanRowDeleted != null)) {
+                    this.Laporan_PerkiraanRowDeleted(this, new Laporan_PerkiraanRowChangeEvent(((Laporan_PerkiraanRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.Laporan_PerkiraanRowDeleting != null)) {
+                    this.Laporan_PerkiraanRowDeleting(this, new Laporan_PerkiraanRowChangeEvent(((Laporan_PerkiraanRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveLaporan_PerkiraanRow(Laporan_PerkiraanRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                BonaDataset ds = new BonaDataset();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "Laporan_PerkiraanDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -4281,6 +4635,144 @@ namespace report_manajemen.Dataset {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class Laporan_PerkiraanRow : global::System.Data.DataRow {
+            
+            private Laporan_PerkiraanDataTable tableLaporan_Perkiraan;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal Laporan_PerkiraanRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableLaporan_Perkiraan = ((Laporan_PerkiraanDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Kode_Akun {
+                get {
+                    return ((string)(this[this.tableLaporan_Perkiraan.Kode_AkunColumn]));
+                }
+                set {
+                    this[this.tableLaporan_Perkiraan.Kode_AkunColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Nama_Akun {
+                get {
+                    try {
+                        return ((string)(this[this.tableLaporan_Perkiraan.Nama_AkunColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Nama Akun\' in table \'Laporan_Perkiraan\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLaporan_Perkiraan.Nama_AkunColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Tipe_Akun {
+                get {
+                    try {
+                        return ((string)(this[this.tableLaporan_Perkiraan.Tipe_AkunColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Tipe Akun\' in table \'Laporan_Perkiraan\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLaporan_Perkiraan.Tipe_AkunColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Grup_Akun {
+                get {
+                    try {
+                        return ((string)(this[this.tableLaporan_Perkiraan.Grup_AkunColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Grup Akun\' in table \'Laporan_Perkiraan\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLaporan_Perkiraan.Grup_AkunColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string GroupAccount {
+                get {
+                    try {
+                        return ((string)(this[this.tableLaporan_Perkiraan.GroupAccountColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'GroupAccount\' in table \'Laporan_Perkiraan\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLaporan_Perkiraan.GroupAccountColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNama_AkunNull() {
+                return this.IsNull(this.tableLaporan_Perkiraan.Nama_AkunColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNama_AkunNull() {
+                this[this.tableLaporan_Perkiraan.Nama_AkunColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTipe_AkunNull() {
+                return this.IsNull(this.tableLaporan_Perkiraan.Tipe_AkunColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTipe_AkunNull() {
+                this[this.tableLaporan_Perkiraan.Tipe_AkunColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsGrup_AkunNull() {
+                return this.IsNull(this.tableLaporan_Perkiraan.Grup_AkunColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetGrup_AkunNull() {
+                this[this.tableLaporan_Perkiraan.Grup_AkunColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsGroupAccountNull() {
+                return this.IsNull(this.tableLaporan_Perkiraan.GroupAccountColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetGroupAccountNull() {
+                this[this.tableLaporan_Perkiraan.GroupAccountColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -4402,6 +4894,40 @@ namespace report_manajemen.Dataset {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public Bukti_BBKRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class Laporan_PerkiraanRowChangeEvent : global::System.EventArgs {
+            
+            private Laporan_PerkiraanRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Laporan_PerkiraanRowChangeEvent(Laporan_PerkiraanRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Laporan_PerkiraanRow Row {
                 get {
                     return this.eventRow;
                 }
