@@ -431,6 +431,7 @@
     <Folder Include="crystalreportviewers\js\" />
     <Folder Include="crystalreportviewers\prompting\" />
     <Folder Include="crystalreportviewers\urlreporting\" />
+    <Folder Include="WebForm\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
