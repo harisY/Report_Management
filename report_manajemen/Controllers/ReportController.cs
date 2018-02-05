@@ -15,6 +15,10 @@ namespace report_manajemen.Controllers
         {
             return View();
         }
+        public ActionResult test()
+        {
+            return View();
+        }
 
         public ActionResult IndexLaporanPerkiraan()
         {
@@ -35,12 +39,33 @@ namespace report_manajemen.Controllers
 
         }
 
-        public ActionResult IndexLaporanAgingPiutang()
+        //------------------------- Laporan Aging Hutang -------------------------------
+
+        public ActionResult IndexLaporanAgingHutang()
         {
             return View();
         }
 
+        [HttpPost]
+        public void ShowLaporanAgingHutang(string txtSupplierName)
+        {
+            Global_Acess global = new Global_Acess();
+            // Setting session for generating report
+            this.HttpContext.Session["ReportName"] = "AgingHutang.rpt";
+            this.HttpContext.Session["rptSupplierName"] = txtSupplierName;
+            //this.HttpContext.Session["rptToDate"] = txtToDate;
+            this.HttpContext.Session["rptSource"] = global.LaporanAgingHutang(txtSupplierName);
+            // Redirecting generic report viewer page from action
+            Response.Redirect("~/WebForm/frmLaporanAgingHutang.aspx");
 
+        }
+
+        //------------------------- Laporan Aging Piutang -------------------------------
+
+        public ActionResult IndexLaporanAgingPiutang()
+        {
+            return View();
+        }
 
         [HttpPost]
         public void ShowLaporanAgingPiutang(string txtCustomerName)
@@ -56,16 +81,50 @@ namespace report_manajemen.Controllers
 
         }
 
-        public void ShowLaporanAgingPiutangNewWin(string txtCustomerName)
+        //------------------------- Laporan Aging Piutang Rekap -------------------------------
+
+        public ActionResult IndexLaporanAgingPiutangRekap()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public void ShowLaporanAgingPiutangRekap(string txtPeriode, string txtCustomerName)
         {
             Global_Acess global = new Global_Acess();
             // Setting session for generating report
-            this.HttpContext.Session["ReportName"] = "AgingPiutang.rpt";
+            this.HttpContext.Session["ReportName"] = "AgingPiutangRekap.rpt";
+            this.HttpContext.Session["rptPeriode"] = txtPeriode;
             this.HttpContext.Session["rptCustomerName"] = txtCustomerName;
             //this.HttpContext.Session["rptToDate"] = txtToDate;
-            this.HttpContext.Session["rptSource"] = global.LaporanAgingPiutang(txtCustomerName);
+            this.HttpContext.Session["rptSource"] = global.LaporanAgingPiutangRekap(txtPeriode,txtCustomerName);
             // Redirecting generic report viewer page from action
+            Response.Redirect("~/WebForm/frmLaporanAgingPiutangRekap.aspx");
 
         }
+
+
+        //------------------------- Bukti Kas Keluar -------------------------------
+
+        public ActionResult IndexLaporanBuktiKasKeluar()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        public void ShowLaporanBuktiKasKeluar(string txtNoBukti)
+        {
+            Global_Acess global = new Global_Acess();
+            // Setting session for generating report
+            this.HttpContext.Session["ReportName"] = "BuktiKasKeluar.rpt";
+            this.HttpContext.Session["rptNoBukti"] = txtNoBukti;
+            //this.HttpContext.Session["rptToDate"] = txtToDate;
+            this.HttpContext.Session["rptSource"] = global.LaporanBuktiKasKeluar(txtNoBukti);
+            // Redirecting generic report viewer page from action
+            Response.Redirect("~/WebForm/frmLaporanBuktiKasKeluar.aspx");
+
+        }
+
     }
 }
