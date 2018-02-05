@@ -18,15 +18,29 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", null, new { @class = "navbar-brand" })
+                @Html.ActionLink("BJA - REPORT MANAGEMENT", "Index", "Home", null, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Accounting <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Laporan Perkiraan", "IndexLaporanPerkiraan", "Report")</li>
+                            <li>@Html.ActionLink("Laporan Aging Piutang", "IndexLaporanAgingPiutang", "Report")</li>
+                            <li>@Html.ActionLink("Laporan Aging Hutang", "", "")</li>
+                            <li>@Html.ActionLink("Laporan Aging Piutang Rekap", "", "")</li>
+                            <li>@Html.ActionLink("Laporan Bukti Bank Keluar", "", "")</li>
+                            <li>@Html.ActionLink("Laporan Bukit Bank Masuk", "", "")</li>
+                            <li>@Html.ActionLink("Laporan Buku Pembantu Hutang", "", "")</li>
+                            <li>@Html.ActionLink("Laporan Buku Pembantu Piutang", "", "")</li>
+                            <li>@Html.ActionLink("Laporan Pengajuan Dana", "", "")</li>
+                            <li>@Html.ActionLink("Laporan Kwitansi Penjualan", "", "")</li>
+                            <li>@Html.ActionLink("Laporan Buku Besa", "", "")</li>
+                        </ul>
+                    </li>
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Report", "IndexLaporanPerkiraan", "Report")</li>
-                    <li>@Html.ActionLink("Report Aging", "IndexLaporanAgingPiutang", "Report")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

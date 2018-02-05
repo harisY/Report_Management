@@ -211,40 +211,10 @@
       <DependentUpon>AgingPiutangRekap.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Report\Bukti Bank Masuk.cs">
-      <DependentUpon>Bukti Bank Masuk.rpt</DependentUpon>
+    <Compile Include="Report\BuktiBankMasuk1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Report\Bukti Bank Keluar.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Bukti Bank Keluar.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Report\CrystalReport1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport1.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Report\Hutang Piutang Karyawan.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Report\Hutang Piutang Karyawan1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Hutang Piutang Karyawan.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Report\Laporan Neraca Saldo.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Report\Laporan Neraca Saldo1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Laporan Neraca Saldo.rpt</DependentUpon>
+      <DependentUpon>BuktiBankMasuk.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Report\LaporanBukuBesar.cs">
@@ -509,25 +479,9 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>AgingPiutangRekap.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report\Bukti Bank Masuk.rpt">
+    <EmbeddedResource Include="Report\BuktiBankMasuk.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Bukti Bank Masuk.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Report\Bukti Bank Keluar.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Bukti Bank Keluar.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Report\CrystalReport1.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Report\Hutang Piutang Karyawan.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Hutang Piutang Karyawan1.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Report\Laporan Neraca Saldo.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Laporan Neraca Saldo1.cs</LastGenOutput>
+      <LastGenOutput>BuktiBankMasuk1.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\LaporanBukuBesar.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
