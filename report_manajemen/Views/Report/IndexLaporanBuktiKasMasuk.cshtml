@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "IndexLaporanBuktiKasMasuk";
+}
+
+<h2>IndexLaporanBuktiKasMasuk</h2>
+
+@using (Html.BeginForm("ShowLaporanBuktiKasMasuk", "Report"))
+{
+    <div class="form-group">
+        <label for="usr">No Bukti:</label>
+        <input type="text" class="form-control" id="txtNoBukti" name="txtNoBukti"><br />
+        <input type="submit" value="Show Report" />
+    </div>
+
+}
+
+

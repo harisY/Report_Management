@@ -126,5 +126,29 @@ namespace report_manajemen.Controllers
 
         }
 
+
+        //------------------------- Bukti Kas Masuk -------------------------------
+
+        public ActionResult IndexLaporanBuktiKasMasuk()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        public void ShowLaporanBuktiKasMasuk(string txtNoBukti)
+        {
+            Global_Acess global = new Global_Acess();
+            // Setting session for generating report
+            this.HttpContext.Session["ReportName"] = "BuktiKasMasuk.rpt";
+            this.HttpContext.Session["rptNoBukti"] = txtNoBukti;
+            //this.HttpContext.Session["rptToDate"] = txtToDate;
+            this.HttpContext.Session["rptSource"] = global.LaporanBuktiKasMasuk(txtNoBukti);
+            // Redirecting generic report viewer page from action
+            Response.Redirect("~/WebForm/frmLaporanBuktiKasMasuk.aspx");
+
+        }
+
+
     }
 }

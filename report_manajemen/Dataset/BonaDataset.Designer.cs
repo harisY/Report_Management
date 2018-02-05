@@ -38,6 +38,8 @@ namespace report_manajemen.Dataset {
         
         private aging_hutangDataTable tableaging_hutang;
         
+        private bukti_kas_masukDataTable tablebukti_kas_masuk;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -86,6 +88,9 @@ namespace report_manajemen.Dataset {
                 }
                 if ((ds.Tables["aging_hutang"] != null)) {
                     base.Tables.Add(new aging_hutangDataTable(ds.Tables["aging_hutang"]));
+                }
+                if ((ds.Tables["bukti_kas_masuk"] != null)) {
+                    base.Tables.Add(new bukti_kas_masukDataTable(ds.Tables["bukti_kas_masuk"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -177,6 +182,16 @@ namespace report_manajemen.Dataset {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public bukti_kas_masukDataTable bukti_kas_masuk {
+            get {
+                return this.tablebukti_kas_masuk;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -263,6 +278,9 @@ namespace report_manajemen.Dataset {
                 if ((ds.Tables["aging_hutang"] != null)) {
                     base.Tables.Add(new aging_hutangDataTable(ds.Tables["aging_hutang"]));
                 }
+                if ((ds.Tables["bukti_kas_masuk"] != null)) {
+                    base.Tables.Add(new bukti_kas_masukDataTable(ds.Tables["bukti_kas_masuk"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -338,6 +356,12 @@ namespace report_manajemen.Dataset {
                     this.tableaging_hutang.InitVars();
                 }
             }
+            this.tablebukti_kas_masuk = ((bukti_kas_masukDataTable)(base.Tables["bukti_kas_masuk"]));
+            if ((initTable == true)) {
+                if ((this.tablebukti_kas_masuk != null)) {
+                    this.tablebukti_kas_masuk.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -362,6 +386,8 @@ namespace report_manajemen.Dataset {
             base.Tables.Add(this.tablebukti_kas_keluar);
             this.tableaging_hutang = new aging_hutangDataTable();
             base.Tables.Add(this.tableaging_hutang);
+            this.tablebukti_kas_masuk = new bukti_kas_masukDataTable();
+            base.Tables.Add(this.tablebukti_kas_masuk);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -403,6 +429,12 @@ namespace report_manajemen.Dataset {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializeaging_hutang() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializebukti_kas_masuk() {
             return false;
         }
         
@@ -481,6 +513,9 @@ namespace report_manajemen.Dataset {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void aging_hutangRowChangeEventHandler(object sender, aging_hutangRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void bukti_kas_masukRowChangeEventHandler(object sender, bukti_kas_masukRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -3656,6 +3691,442 @@ namespace report_manajemen.Dataset {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class bukti_kas_masukDataTable : global::System.Data.TypedTableBase<bukti_kas_masukRow> {
+            
+            private global::System.Data.DataColumn columnTanggal_Bukti;
+            
+            private global::System.Data.DataColumn columnNo_Bukti;
+            
+            private global::System.Data.DataColumn columnKode_Kas;
+            
+            private global::System.Data.DataColumn columnNama_Kas;
+            
+            private global::System.Data.DataColumn columnNo_Akun;
+            
+            private global::System.Data.DataColumn columnNama_Akun;
+            
+            private global::System.Data.DataColumn columnKeterangan2;
+            
+            private global::System.Data.DataColumn columnDoc_Reff;
+            
+            private global::System.Data.DataColumn columnDebet;
+            
+            private global::System.Data.DataColumn columnPeriode;
+            
+            private global::System.Data.DataColumn columnKeterangan;
+            
+            private global::System.Data.DataColumn columnproject_id;
+            
+            private global::System.Data.DataColumn columnproject_name;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bukti_kas_masukDataTable() {
+                this.TableName = "bukti_kas_masuk";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal bukti_kas_masukDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected bukti_kas_masukDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Tanggal_BuktiColumn {
+                get {
+                    return this.columnTanggal_Bukti;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn No_BuktiColumn {
+                get {
+                    return this.columnNo_Bukti;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Kode_KasColumn {
+                get {
+                    return this.columnKode_Kas;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Nama_KasColumn {
+                get {
+                    return this.columnNama_Kas;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn No_AkunColumn {
+                get {
+                    return this.columnNo_Akun;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Nama_AkunColumn {
+                get {
+                    return this.columnNama_Akun;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Keterangan2Column {
+                get {
+                    return this.columnKeterangan2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Doc_ReffColumn {
+                get {
+                    return this.columnDoc_Reff;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DebetColumn {
+                get {
+                    return this.columnDebet;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PeriodeColumn {
+                get {
+                    return this.columnPeriode;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn KeteranganColumn {
+                get {
+                    return this.columnKeterangan;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn project_idColumn {
+                get {
+                    return this.columnproject_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn project_nameColumn {
+                get {
+                    return this.columnproject_name;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bukti_kas_masukRow this[int index] {
+                get {
+                    return ((bukti_kas_masukRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event bukti_kas_masukRowChangeEventHandler bukti_kas_masukRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event bukti_kas_masukRowChangeEventHandler bukti_kas_masukRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event bukti_kas_masukRowChangeEventHandler bukti_kas_masukRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event bukti_kas_masukRowChangeEventHandler bukti_kas_masukRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Addbukti_kas_masukRow(bukti_kas_masukRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bukti_kas_masukRow Addbukti_kas_masukRow(System.DateTime Tanggal_Bukti, string No_Bukti, string Kode_Kas, string Nama_Kas, string No_Akun, string Nama_Akun, string Keterangan2, string Doc_Reff, decimal Debet, int Periode, string Keterangan, string project_id, string project_name) {
+                bukti_kas_masukRow rowbukti_kas_masukRow = ((bukti_kas_masukRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        Tanggal_Bukti,
+                        No_Bukti,
+                        Kode_Kas,
+                        Nama_Kas,
+                        No_Akun,
+                        Nama_Akun,
+                        Keterangan2,
+                        Doc_Reff,
+                        Debet,
+                        Periode,
+                        Keterangan,
+                        project_id,
+                        project_name};
+                rowbukti_kas_masukRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowbukti_kas_masukRow);
+                return rowbukti_kas_masukRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bukti_kas_masukRow FindByNo_Bukti(string No_Bukti) {
+                return ((bukti_kas_masukRow)(this.Rows.Find(new object[] {
+                            No_Bukti})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                bukti_kas_masukDataTable cln = ((bukti_kas_masukDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new bukti_kas_masukDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnTanggal_Bukti = base.Columns["Tanggal Bukti"];
+                this.columnNo_Bukti = base.Columns["No Bukti"];
+                this.columnKode_Kas = base.Columns["Kode Kas"];
+                this.columnNama_Kas = base.Columns["Nama Kas"];
+                this.columnNo_Akun = base.Columns["No Akun"];
+                this.columnNama_Akun = base.Columns["Nama Akun"];
+                this.columnKeterangan2 = base.Columns["Keterangan2"];
+                this.columnDoc_Reff = base.Columns["Doc Reff"];
+                this.columnDebet = base.Columns["Debet"];
+                this.columnPeriode = base.Columns["Periode"];
+                this.columnKeterangan = base.Columns["Keterangan"];
+                this.columnproject_id = base.Columns["project_id"];
+                this.columnproject_name = base.Columns["project_name"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnTanggal_Bukti = new global::System.Data.DataColumn("Tanggal Bukti", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTanggal_Bukti);
+                this.columnNo_Bukti = new global::System.Data.DataColumn("No Bukti", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNo_Bukti);
+                this.columnKode_Kas = new global::System.Data.DataColumn("Kode Kas", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKode_Kas);
+                this.columnNama_Kas = new global::System.Data.DataColumn("Nama Kas", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNama_Kas);
+                this.columnNo_Akun = new global::System.Data.DataColumn("No Akun", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNo_Akun);
+                this.columnNama_Akun = new global::System.Data.DataColumn("Nama Akun", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNama_Akun);
+                this.columnKeterangan2 = new global::System.Data.DataColumn("Keterangan2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKeterangan2);
+                this.columnDoc_Reff = new global::System.Data.DataColumn("Doc Reff", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDoc_Reff);
+                this.columnDebet = new global::System.Data.DataColumn("Debet", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDebet);
+                this.columnPeriode = new global::System.Data.DataColumn("Periode", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPeriode);
+                this.columnKeterangan = new global::System.Data.DataColumn("Keterangan", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKeterangan);
+                this.columnproject_id = new global::System.Data.DataColumn("project_id", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnproject_id);
+                this.columnproject_name = new global::System.Data.DataColumn("project_name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnproject_name);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnNo_Bukti}, true));
+                this.columnNo_Bukti.AllowDBNull = false;
+                this.columnNo_Bukti.Unique = true;
+                this.columnNo_Bukti.MaxLength = 16;
+                this.columnKode_Kas.MaxLength = 25;
+                this.columnNama_Kas.MaxLength = 100;
+                this.columnNo_Akun.MaxLength = 25;
+                this.columnNama_Akun.MaxLength = 100;
+                this.columnKeterangan2.MaxLength = 250;
+                this.columnDoc_Reff.MaxLength = 25;
+                this.columnKeterangan.MaxLength = 250;
+                this.columnproject_id.MaxLength = 15;
+                this.columnproject_name.MaxLength = 50;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bukti_kas_masukRow Newbukti_kas_masukRow() {
+                return ((bukti_kas_masukRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new bukti_kas_masukRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(bukti_kas_masukRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.bukti_kas_masukRowChanged != null)) {
+                    this.bukti_kas_masukRowChanged(this, new bukti_kas_masukRowChangeEvent(((bukti_kas_masukRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.bukti_kas_masukRowChanging != null)) {
+                    this.bukti_kas_masukRowChanging(this, new bukti_kas_masukRowChangeEvent(((bukti_kas_masukRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.bukti_kas_masukRowDeleted != null)) {
+                    this.bukti_kas_masukRowDeleted(this, new bukti_kas_masukRowChangeEvent(((bukti_kas_masukRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.bukti_kas_masukRowDeleting != null)) {
+                    this.bukti_kas_masukRowDeleting(this, new bukti_kas_masukRowChangeEvent(((bukti_kas_masukRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Removebukti_kas_masukRow(bukti_kas_masukRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                BonaDataset ds = new BonaDataset();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "bukti_kas_masukDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class vw_rpt_partner_aging_hutangRow : global::System.Data.DataRow {
@@ -6523,6 +6994,368 @@ namespace report_manajemen.Dataset {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class bukti_kas_masukRow : global::System.Data.DataRow {
+            
+            private bukti_kas_masukDataTable tablebukti_kas_masuk;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal bukti_kas_masukRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablebukti_kas_masuk = ((bukti_kas_masukDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime Tanggal_Bukti {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablebukti_kas_masuk.Tanggal_BuktiColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Tanggal Bukti\' in table \'bukti_kas_masuk\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablebukti_kas_masuk.Tanggal_BuktiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string No_Bukti {
+                get {
+                    return ((string)(this[this.tablebukti_kas_masuk.No_BuktiColumn]));
+                }
+                set {
+                    this[this.tablebukti_kas_masuk.No_BuktiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Kode_Kas {
+                get {
+                    try {
+                        return ((string)(this[this.tablebukti_kas_masuk.Kode_KasColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Kode Kas\' in table \'bukti_kas_masuk\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablebukti_kas_masuk.Kode_KasColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Nama_Kas {
+                get {
+                    try {
+                        return ((string)(this[this.tablebukti_kas_masuk.Nama_KasColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Nama Kas\' in table \'bukti_kas_masuk\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablebukti_kas_masuk.Nama_KasColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string No_Akun {
+                get {
+                    try {
+                        return ((string)(this[this.tablebukti_kas_masuk.No_AkunColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'No Akun\' in table \'bukti_kas_masuk\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablebukti_kas_masuk.No_AkunColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Nama_Akun {
+                get {
+                    try {
+                        return ((string)(this[this.tablebukti_kas_masuk.Nama_AkunColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Nama Akun\' in table \'bukti_kas_masuk\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablebukti_kas_masuk.Nama_AkunColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Keterangan2 {
+                get {
+                    try {
+                        return ((string)(this[this.tablebukti_kas_masuk.Keterangan2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Keterangan2\' in table \'bukti_kas_masuk\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablebukti_kas_masuk.Keterangan2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Doc_Reff {
+                get {
+                    try {
+                        return ((string)(this[this.tablebukti_kas_masuk.Doc_ReffColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Doc Reff\' in table \'bukti_kas_masuk\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablebukti_kas_masuk.Doc_ReffColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal Debet {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablebukti_kas_masuk.DebetColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Debet\' in table \'bukti_kas_masuk\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablebukti_kas_masuk.DebetColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Periode {
+                get {
+                    try {
+                        return ((int)(this[this.tablebukti_kas_masuk.PeriodeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Periode\' in table \'bukti_kas_masuk\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablebukti_kas_masuk.PeriodeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Keterangan {
+                get {
+                    try {
+                        return ((string)(this[this.tablebukti_kas_masuk.KeteranganColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Keterangan\' in table \'bukti_kas_masuk\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablebukti_kas_masuk.KeteranganColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string project_id {
+                get {
+                    try {
+                        return ((string)(this[this.tablebukti_kas_masuk.project_idColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'project_id\' in table \'bukti_kas_masuk\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablebukti_kas_masuk.project_idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string project_name {
+                get {
+                    try {
+                        return ((string)(this[this.tablebukti_kas_masuk.project_nameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'project_name\' in table \'bukti_kas_masuk\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablebukti_kas_masuk.project_nameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTanggal_BuktiNull() {
+                return this.IsNull(this.tablebukti_kas_masuk.Tanggal_BuktiColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTanggal_BuktiNull() {
+                this[this.tablebukti_kas_masuk.Tanggal_BuktiColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsKode_KasNull() {
+                return this.IsNull(this.tablebukti_kas_masuk.Kode_KasColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetKode_KasNull() {
+                this[this.tablebukti_kas_masuk.Kode_KasColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNama_KasNull() {
+                return this.IsNull(this.tablebukti_kas_masuk.Nama_KasColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNama_KasNull() {
+                this[this.tablebukti_kas_masuk.Nama_KasColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNo_AkunNull() {
+                return this.IsNull(this.tablebukti_kas_masuk.No_AkunColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNo_AkunNull() {
+                this[this.tablebukti_kas_masuk.No_AkunColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNama_AkunNull() {
+                return this.IsNull(this.tablebukti_kas_masuk.Nama_AkunColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNama_AkunNull() {
+                this[this.tablebukti_kas_masuk.Nama_AkunColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsKeterangan2Null() {
+                return this.IsNull(this.tablebukti_kas_masuk.Keterangan2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetKeterangan2Null() {
+                this[this.tablebukti_kas_masuk.Keterangan2Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDoc_ReffNull() {
+                return this.IsNull(this.tablebukti_kas_masuk.Doc_ReffColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDoc_ReffNull() {
+                this[this.tablebukti_kas_masuk.Doc_ReffColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDebetNull() {
+                return this.IsNull(this.tablebukti_kas_masuk.DebetColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDebetNull() {
+                this[this.tablebukti_kas_masuk.DebetColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPeriodeNull() {
+                return this.IsNull(this.tablebukti_kas_masuk.PeriodeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPeriodeNull() {
+                this[this.tablebukti_kas_masuk.PeriodeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsKeteranganNull() {
+                return this.IsNull(this.tablebukti_kas_masuk.KeteranganColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetKeteranganNull() {
+                this[this.tablebukti_kas_masuk.KeteranganColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isproject_idNull() {
+                return this.IsNull(this.tablebukti_kas_masuk.project_idColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setproject_idNull() {
+                this[this.tablebukti_kas_masuk.project_idColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isproject_nameNull() {
+                return this.IsNull(this.tablebukti_kas_masuk.project_nameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setproject_nameNull() {
+                this[this.tablebukti_kas_masuk.project_nameColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -6746,6 +7579,40 @@ namespace report_manajemen.Dataset {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public aging_hutangRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class bukti_kas_masukRowChangeEvent : global::System.EventArgs {
+            
+            private bukti_kas_masukRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bukti_kas_masukRowChangeEvent(bukti_kas_masukRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bukti_kas_masukRow Row {
                 get {
                     return this.eventRow;
                 }

@@ -208,6 +208,42 @@ namespace report_manajemen.DAL
             }
         }
 
+
+
+        // ------------- Laporan Bukti Kas Masuk ----------------------------------
+
+        public DataSet LaporanBuktiKasMasuk(string txtNoBukti)
+        {
+            try
+            {
+                BonaDataset ds = new BonaDataset();
+                string query = @"SELECT TOP 1000 [Tanggal Bukti]
+                                      ,[No Bukti]
+                                      ,[Kode Kas]
+                                      ,[Nama Kas]
+                                      ,[No Akun]
+                                      ,[Nama Akun]
+                                      ,[Keterangan2]
+                                      ,[Doc Reff]
+                                      ,[Debet]
+                                      ,[Periode]
+                                      ,[Keterangan]
+                                      ,[project_id]
+                                      ,[project_name]
+                                  FROM [CosmicDB_Cargo].[dbo].[Bukti BKM]
+                                  where [No Bukti] = '" + txtNoBukti + "'";
+                ds = GetDataSet(query, "bukti_kas_masuk");
+                return ds;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+
+
     }
 
 
