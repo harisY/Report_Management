@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "IndexLaporanAgingUtang";
+}
+
+<script type="text/javascript">
+    function SimpleInNewWin() {
+        window.open("../Report/Form/formReportTimbangan.aspx", 'mywindow', 'fullscreen=yes, scrollbars=auto');
+     }
+     $(document).ready(function () {
+         $(".dtp").datepicker();
+     });
+
+     function GenericInNewWin() {
+         var oParam = { "FromDate": "", "ToDate": "" };
+         oParam.FromDate = $("#txtFromDate").val();
+         oParam.ToDate = $("#txtToDate").val();
+
+         $.ajax({
+             url: '../../ReportWebForm/ShowGenericReportInNewWin',
+             data: JSON.stringify(oParam),
+             type: 'POST',
+             contentType: 'application/json;',
+             dataType: 'json',
+             success: function () {
+                 window.open("../Report/Form/formReportTimbangan.aspx", 'mywindow', 'fullscreen=yes, scrollbars=auto');
+             }
+         });
+
+      }
+
+</script>
+<h2>Report Using ASP.net Web Forms</h2>
+<a href="../Report/Form/formReportTimbangan.aspx">View Report</a>
+@using (Html.BeginForm("ShowGenericReport", "ReportWebForm"))
+{
+    <p><strong> Generic Report</strong>(With Data and Report Parameter)</p>
+    <label>From</label>
+    <input type="text" id="txtFromDate" name="txtFromDate" value="@DateTime.Now.ToShortDateString()" class="dtp" /> <label>To</label>
+    <input type="text" id="txtToDate" name="txtToDate" value="@DateTime.Now.ToShortDateString()" class="dtp" />
+    <br />
+    <input type="submit" value="Show Generic(Rpt with Data)" />
+    <input type="button" value="Show Generic in New Window" onclick="SimpleInNewWin()" />
+    <br />
+}
+

@@ -229,6 +229,24 @@
       <DependentUpon>CrystalReport1.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Report\Hutang Piutang Karyawan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Hutang Piutang Karyawan1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Hutang Piutang Karyawan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Laporan Neraca Saldo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Laporan Neraca Saldo1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Laporan Neraca Saldo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Report\LaporanBukuBesar.cs">
       <DependentUpon>LaporanBukuBesar.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -326,6 +344,13 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="WebForm\frmLaporanAgingHutang.aspx.cs">
+      <DependentUpon>frmLaporanAgingHutang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\frmLaporanAgingHutang.aspx.designer.cs">
+      <DependentUpon>frmLaporanAgingHutang.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WebForm\frmLaporanAgingPiutang.aspx.cs">
       <DependentUpon>frmLaporanAgingPiutang.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -344,6 +369,8 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
     <Content Include="crystalreportviewers13\allInOne.js" />
     <Content Include="crystalreportviewers13\allStrings_cs.js" />
     <Content Include="crystalreportviewers13\allStrings_da.js" />
@@ -375,12 +402,14 @@
     <Content Include="crystalreportviewers13\processindicator.js" />
     <Content Include="crystalreportviewers13\promptengine-compressed.js" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Dataset\BonaDataset.xsc">
       <DependentUpon>BonaDataset.xsd</DependentUpon>
     </Content>
+    <Content Include="WebForm\frmLaporanAgingHutang.aspx" />
     <Content Include="WebForm\frmLaporanAgingPiutang.aspx" />
     <Content Include="WebForm\frmLaporanPerkiraan.aspx" />
     <Content Include="crystalreportviewers13\crsmarttag.jsp" />
@@ -396,6 +425,11 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -441,6 +475,12 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Report\IndexLaporanPerkiraan.cshtml" />
     <Content Include="Views\Report\IndexLaporanAgingPiutang.cshtml" />
+    <Content Include="Views\Report\Index.cshtml" />
+    <Content Include="Views\Report\IndexLaporanAgingHutang.cshtml" />
+    <Content Include="Views\Report\IndexLaporanAgingPiutangRekap.cshtml" />
+    <Content Include="Views\Report\IndexLaporanAgingUtang.cshtml" />
+    <Content Include="Views\Report\IndexLaporanBuktiKasKeluar.cshtml" />
+    <Content Include="Views\Report\PopUp\_PopUpAgingHutang.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -480,6 +520,14 @@
     <EmbeddedResource Include="Report\CrystalReport1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Hutang Piutang Karyawan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Hutang Piutang Karyawan1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Laporan Neraca Saldo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Laporan Neraca Saldo1.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\LaporanBukuBesar.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
