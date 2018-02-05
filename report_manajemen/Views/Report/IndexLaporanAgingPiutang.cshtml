@@ -2,28 +2,15 @@
 @{
     ViewBag.Title = "IndexLaporanAgingPiutang";
 }
-<script type="text/javascript">
-     function GenericInNewWin() {
-         var oParam = { "txtCustomerName": ""};
-         oParam.txtCustomerName = $("#txtcustomer").val();
-         $.ajax({
-             url: '../../Report/ShowLaporanAgingPiutang',
-             data: JSON.stringify(oParam),
-             type: 'POST',
-             contentType: 'application/json;',
-             dataType: 'json',
-             success: function () {
-                 window.open("../WebForm/frmLaporanAgingPiutang.aspx", 'mywindow', 'fullscreen=yes, scrollbars=auto');
-             }
-         });
 
-      }
-
-</script>
 <h2>IndexLaporanAgingPiutang</h2>
-<div class="form-group">
-    <label for="usr">Customer:</label>
-    <input type="text" class="form-control" id="txtcustomer"><br />
-    <input type="button" value="Show Generic in New Window" onclick="GenericInNewWin()" />
-</div>
+@using (Html.BeginForm("ShowLaporanAgingPiutang", "Report"))
+{
+    <div class="form-group">
+        <label for="usr">Customer:</label>
+        <input type="text" class="form-control" id="txtCustomerName" name="txtCustomerName"><br />
+        <input type="submit" value="Show Report" />
+    </div>
+
+}
 
