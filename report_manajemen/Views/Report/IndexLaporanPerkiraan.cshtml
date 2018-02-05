@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "IndexLaporanPerkiraan";
+}
+
+<h2>IndexLaporanPerkiraan</h2>
+
+<a href="../WebForm/frmLaporanPerkiraan.aspx">View Report</a>
+@using (Html.BeginForm("ShowLaporanPerkiraan", "Report"))
+{
+    <p><strong> Generic Report</strong>(With Data and Report Parameter)</p>
+    <input type="submit" value="Show Report" />
+    <br />
+}

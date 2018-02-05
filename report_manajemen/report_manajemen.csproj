@@ -47,6 +47,7 @@
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
@@ -180,6 +181,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ReportController.cs" />
+    <Compile Include="DAL\Global_Acess.cs" />
     <Compile Include="Dataset\BonaDataset.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -324,40 +326,54 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="WebForm\frmLaporanAgingPiutang.aspx.cs">
+      <DependentUpon>frmLaporanAgingPiutang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\frmLaporanAgingPiutang.aspx.designer.cs">
+      <DependentUpon>frmLaporanAgingPiutang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm\frmLaporanPerkiraan.aspx.cs">
+      <DependentUpon>frmLaporanPerkiraan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\frmLaporanPerkiraan.aspx.designer.cs">
+      <DependentUpon>frmLaporanPerkiraan.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="crystalreportviewers\allInOne.js" />
-    <Content Include="crystalreportviewers\allStrings_cs.js" />
-    <Content Include="crystalreportviewers\allStrings_da.js" />
-    <Content Include="crystalreportviewers\allStrings_de.js" />
-    <Content Include="crystalreportviewers\allStrings_en.js" />
-    <Content Include="crystalreportviewers\allStrings_es.js" />
-    <Content Include="crystalreportviewers\allStrings_fi.js" />
-    <Content Include="crystalreportviewers\allStrings_fr.js" />
-    <Content Include="crystalreportviewers\allStrings_hu.js" />
-    <Content Include="crystalreportviewers\allStrings_it.js" />
-    <Content Include="crystalreportviewers\allStrings_ja.js" />
-    <Content Include="crystalreportviewers\allStrings_ko.js" />
-    <Content Include="crystalreportviewers\allStrings_nb.js" />
-    <Content Include="crystalreportviewers\allStrings_nl.js" />
-    <Content Include="crystalreportviewers\allStrings_pl.js" />
-    <Content Include="crystalreportviewers\allStrings_pt.js" />
-    <Content Include="crystalreportviewers\allStrings_ru.js" />
-    <Content Include="crystalreportviewers\allStrings_sk.js" />
-    <Content Include="crystalreportviewers\allStrings_sv.js" />
-    <Content Include="crystalreportviewers\allStrings_th.js" />
-    <Content Include="crystalreportviewers\allStrings_tr.js" />
-    <Content Include="crystalreportviewers\allStrings_zh_CN.js" />
-    <Content Include="crystalreportviewers\allStrings_zh_TW.js" />
-    <Content Include="crystalreportviewers\crsmarttag.asp" />
-    <Content Include="crystalreportviewers\crystalimagehandler.asp" />
-    <Content Include="crystalreportviewers\imagehandlerdotnetbridge.aspx" />
-    <Content Include="crystalreportviewers\parameterUIController-compressed.js" />
-    <Content Include="crystalreportviewers\preview.aspx" />
-    <Content Include="crystalreportviewers\processindicator.js" />
-    <Content Include="crystalreportviewers\promptengine-compressed.js" />
+    <Content Include="crystalreportviewers13\allInOne.js" />
+    <Content Include="crystalreportviewers13\allStrings_cs.js" />
+    <Content Include="crystalreportviewers13\allStrings_da.js" />
+    <Content Include="crystalreportviewers13\allStrings_de.js" />
+    <Content Include="crystalreportviewers13\allStrings_en.js" />
+    <Content Include="crystalreportviewers13\allStrings_es.js" />
+    <Content Include="crystalreportviewers13\allStrings_fi.js" />
+    <Content Include="crystalreportviewers13\allStrings_fr.js" />
+    <Content Include="crystalreportviewers13\allStrings_hu.js" />
+    <Content Include="crystalreportviewers13\allStrings_it.js" />
+    <Content Include="crystalreportviewers13\allStrings_ja.js" />
+    <Content Include="crystalreportviewers13\allStrings_ko.js" />
+    <Content Include="crystalreportviewers13\allStrings_nb.js" />
+    <Content Include="crystalreportviewers13\allStrings_nl.js" />
+    <Content Include="crystalreportviewers13\allStrings_pl.js" />
+    <Content Include="crystalreportviewers13\allStrings_pt.js" />
+    <Content Include="crystalreportviewers13\allStrings_ru.js" />
+    <Content Include="crystalreportviewers13\allStrings_sk.js" />
+    <Content Include="crystalreportviewers13\allStrings_sv.js" />
+    <Content Include="crystalreportviewers13\allStrings_th.js" />
+    <Content Include="crystalreportviewers13\allStrings_tr.js" />
+    <Content Include="crystalreportviewers13\allStrings_zh_CN.js" />
+    <Content Include="crystalreportviewers13\allStrings_zh_TW.js" />
+    <Content Include="crystalreportviewers13\crsmarttag.asp" />
+    <Content Include="crystalreportviewers13\crystalimagehandler.asp" />
+    <Content Include="crystalreportviewers13\imagehandlerdotnetbridge.aspx" />
+    <Content Include="crystalreportviewers13\parameterUIController-compressed.js" />
+    <Content Include="crystalreportviewers13\preview.aspx" />
+    <Content Include="crystalreportviewers13\processindicator.js" />
+    <Content Include="crystalreportviewers13\promptengine-compressed.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -365,8 +381,10 @@
     <Content Include="Dataset\BonaDataset.xsc">
       <DependentUpon>BonaDataset.xsd</DependentUpon>
     </Content>
-    <Content Include="crystalreportviewers\crsmarttag.jsp" />
-    <Content Include="crystalreportviewers\preview.jsp" />
+    <Content Include="WebForm\frmLaporanAgingPiutang.aspx" />
+    <Content Include="WebForm\frmLaporanPerkiraan.aspx" />
+    <Content Include="crystalreportviewers13\crsmarttag.jsp" />
+    <Content Include="crystalreportviewers13\preview.jsp" />
     <None Include="Dataset\BonaDataset.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -421,16 +439,18 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Report\Report.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Report\IndexLaporanPerkiraan.cshtml" />
+    <Content Include="Views\Report\IndexLaporanAgingPiutang.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="crystalreportviewers\ActiveXControls\" />
-    <Folder Include="crystalreportviewers\css\" />
-    <Folder Include="crystalreportviewers\html\" />
-    <Folder Include="crystalreportviewers\images\" />
-    <Folder Include="crystalreportviewers\js\" />
-    <Folder Include="crystalreportviewers\prompting\" />
-    <Folder Include="crystalreportviewers\urlreporting\" />
+    <Folder Include="crystalreportviewers13\ActiveXControls\" />
+    <Folder Include="crystalreportviewers13\css\" />
+    <Folder Include="crystalreportviewers13\html\" />
+    <Folder Include="crystalreportviewers13\images\" />
+    <Folder Include="crystalreportviewers13\js\" />
+    <Folder Include="crystalreportviewers13\prompting\" />
+    <Folder Include="crystalreportviewers13\urlreporting\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -579,7 +599,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>3360</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
