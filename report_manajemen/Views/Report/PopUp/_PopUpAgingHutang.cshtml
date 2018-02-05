@@ -1,4 +1,6 @@
-﻿<div class="modal fade" id="PopUpAgingHutang">
+﻿@using (Html.BeginForm("ShowLaporanAgingHutang", "Report"))
+{
+<div class="modal fade" id="PopUpAgingHutang">
     <div class="modal-dialog">
         <div class="modal-content panel panel-primary">
             <div class="panel-heading">
@@ -24,7 +26,7 @@
                             <label class="col-sm-4 col-md-4 control-label text-muted" style="text-align:left;">Supplier</label>
                             <label class="col-sm-1 col-md-1 control-label text-muted ">:</label>
                             <div class="col-sm-7 col-md-7">
-                                <input disabled id="txtSupplierName" name ="txtSupplierName" class="form-control" data-required="true" />
+                                <input id="txtSupplierName" name ="txtSupplierName" class="form-control" data-required="true" />
                             </div>
                         </div>
                     </div>
@@ -33,7 +35,7 @@
             <div class="panel-footer">
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="control-label text-center">
-                        <button  type="button" title="Save" class="btn btn-primary"><span class="bold"><i class="fa fa-check"> View Report</i></span></button>
+                        <button  type="submit" title="Save" class="btn btn-primary"><span class="bold"><i class="fa fa-check"> View Report</i></span></button>
                         <button data-dismiss="modal" type="button" title="Cancel" class="btn btn-default"><span class="bold"><i class="fa fa-times">Cancel</i></span></button>
                     </div>
                 </div>
@@ -41,3 +43,4 @@
         </div>
     </div>
 </div>
+}
