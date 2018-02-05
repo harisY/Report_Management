@@ -16,14 +16,14 @@ namespace report_manajemen.Report {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class Bukti_Bank_Masuk : ReportClass {
+    public class BuktiBankKeluar : ReportClass {
         
-        public Bukti_Bank_Masuk() {
+        public BuktiBankKeluar() {
         }
         
         public override string ResourceName {
             get {
-                return "Bukti Bank Masuk.rpt";
+                return "BuktiBankKeluar.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace report_manajemen.Report {
         
         public override string FullResourceName {
             get {
-                return "report_manajemen.Report.Bukti Bank Masuk.rpt";
+                return "report_manajemen.Report.BuktiBankKeluar.rpt";
             }
             set {
                 // Do nothing
@@ -103,12 +103,20 @@ namespace report_manajemen.Report {
                 return this.ReportDefinition.Sections[6];
             }
         }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.Shared.IParameterField Parameter_no_bukti {
+            get {
+                return this.DataDefinition.ParameterFields[0];
+            }
+        }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedBukti_Bank_Masuk : Component, ICachedReport {
+    public class CachedBuktiBankKeluar : Component, ICachedReport {
         
-        public CachedBukti_Bank_Masuk() {
+        public CachedBuktiBankKeluar() {
         }
         
         [Browsable(false)]
@@ -145,7 +153,7 @@ namespace report_manajemen.Report {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            Bukti_Bank_Masuk rpt = new Bukti_Bank_Masuk();
+            BuktiBankKeluar rpt = new BuktiBankKeluar();
             rpt.Site = this.Site;
             return rpt;
         }

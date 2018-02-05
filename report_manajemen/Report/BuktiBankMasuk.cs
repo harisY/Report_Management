@@ -16,14 +16,14 @@ namespace report_manajemen.Report {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class Bukti_Bank_Keluar : ReportClass {
+    public class BuktiBankMasuk : ReportClass {
         
-        public Bukti_Bank_Keluar() {
+        public BuktiBankMasuk() {
         }
         
         public override string ResourceName {
             get {
-                return "Bukti Bank Keluar.rpt";
+                return "BuktiBankMasuk.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace report_manajemen.Report {
         
         public override string FullResourceName {
             get {
-                return "report_manajemen.Report.Bukti Bank Keluar.rpt";
+                return "report_manajemen.Report.BuktiBankMasuk.rpt";
             }
             set {
                 // Do nothing
@@ -106,9 +106,9 @@ namespace report_manajemen.Report {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedBukti_Bank_Keluar : Component, ICachedReport {
+    public class CachedBuktiBankMasuk : Component, ICachedReport {
         
-        public CachedBukti_Bank_Keluar() {
+        public CachedBuktiBankMasuk() {
         }
         
         [Browsable(false)]
@@ -145,7 +145,7 @@ namespace report_manajemen.Report {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            Bukti_Bank_Keluar rpt = new Bukti_Bank_Keluar();
+            BuktiBankMasuk rpt = new BuktiBankMasuk();
             rpt.Site = this.Site;
             return rpt;
         }
