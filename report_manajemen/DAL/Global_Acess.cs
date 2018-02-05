@@ -69,6 +69,41 @@ namespace report_manajemen.DAL
             }
         }
 
+        //------------------------- Laporan Aging Hutang -------------------------------
+
+        public DataSet LaporanAgingHutang(string SupplierName)
+        {
+            try
+            {
+                BonaDataset ds = new BonaDataset();
+                string query = @"SELECT TOP 1000 [Tgl Trans]
+                              ,[Partner ID]
+                              ,[Tipe Invoice]
+                              ,[Supplier]
+                              ,[No Bukti]
+                              ,[No Ref]
+                              ,[Tipe Partner]
+                              ,[Harga]
+                              ,[Tgl Jatuh Tempo]
+                              ,[TypeTrans]
+                              ,[term_days]
+                              ,[reminder_days]
+                              ,[Batas Bayar]
+                              ,[Reminder Bayar]
+                              ,[DateTrans]
+                              FROM [CosmicDB_Cargo].[dbo].[vw_rpt_partner_aging_hutang] where Supplier = '" + SupplierName + "'";
+                ds = GetDataSet(query, "aging_hutang");
+                return ds;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        //------------------------- Laporan Aging Piutang -------------------------------
+
         public DataSet LaporanAgingPiutang(string customerName)
         {
             try
@@ -102,7 +137,83 @@ namespace report_manajemen.DAL
             }
         }
 
+        //------------------------- Laporan Aging Piutang Rekap -------------------------------
+
+        public DataSet LaporanAgingPiutangRekap(string Periode, string customerName)
+        {
+            try
+            {
+                BonaDataset ds = new BonaDataset();
+                string query = @"SELECT TOP 1000 [Tgl Trans]
+                              ,[Partner ID]
+                              ,[Tipe Invoice]
+                              ,[Customer]
+                              ,[No Bukti]
+                              ,[No Ref]
+                              ,[Tipe Partner]
+                              ,[Harga]
+                              ,[Tgl Jatuh Tempo]
+                              ,[TypeTrans]
+                              ,[term_days]
+                              ,[reminder_days]
+                              ,[Batas Bayar]
+                              ,[Reminder Bayar]
+                              ,[DateTrans]
+                              ,[no_invoice]
+                              ,[no_kwitansi]
+                              ,[current_year]
+                              ,[begin_date]
+                              ,[end_date]
+                              ,[Periode]
+                              FROM [CosmicDB_Cargo].[dbo].[vw_rpt_partner_aging_piutang_rekap_period] where Periode = '" + Periode + "' and Customer = '" + customerName + "'";
+                ds = GetDataSet(query, "aging_piutang_rekap");
+                return ds;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        // ------------- Laporan Bukti Kas Keluar ----------------------------------
+
+        public DataSet LaporanBuktiKasKeluar(string txtNoBukti)
+        {
+            try
+            {
+                BonaDataset ds = new BonaDataset();
+                string query = @"SELECT [Tanggal Bukti]
+                                  ,[No Bukti]
+                                  ,[Kode Kas]
+                                  ,[Nama Kas]
+                                  ,[No Akun]
+                                  ,[Nama Akun]
+                                  ,[Keterangan2]
+                                  ,[Doc Reff]
+                                  ,[Debet]
+                                  ,[Periode]
+                                  ,[Keterangan]
+                                  ,[project_id]
+                                  ,[project_name]
+                                  FROM [CosmicDB_Cargo].[dbo].[Bukti BKK] 
+                                  where [No Bukti] = '" + txtNoBukti + "'";
+                ds = GetDataSet(query, "bukti_kas_keluar");
+                return ds;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
     }
+
+
+
+
+
 
 
     public class TransactionHelper

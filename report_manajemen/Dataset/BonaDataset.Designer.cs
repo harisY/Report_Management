@@ -28,11 +28,15 @@ namespace report_manajemen.Dataset {
         
         private aging_piutangDataTable tableaging_piutang;
         
-        private AgingPiutangRekapPeriodDataTable tableAgingPiutangRekapPeriod;
+        private aging_piutang_rekapDataTable tableaging_piutang_rekap;
         
         private Bukti_BBKDataTable tableBukti_BBK;
         
         private Laporan_PerkiraanDataTable tableLaporan_Perkiraan;
+        
+        private bukti_kas_keluarDataTable tablebukti_kas_keluar;
+        
+        private aging_hutangDataTable tableaging_hutang;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -68,14 +72,20 @@ namespace report_manajemen.Dataset {
                 if ((ds.Tables["aging_piutang"] != null)) {
                     base.Tables.Add(new aging_piutangDataTable(ds.Tables["aging_piutang"]));
                 }
-                if ((ds.Tables["AgingPiutangRekapPeriod"] != null)) {
-                    base.Tables.Add(new AgingPiutangRekapPeriodDataTable(ds.Tables["AgingPiutangRekapPeriod"]));
+                if ((ds.Tables["aging_piutang_rekap"] != null)) {
+                    base.Tables.Add(new aging_piutang_rekapDataTable(ds.Tables["aging_piutang_rekap"]));
                 }
                 if ((ds.Tables["Bukti BBK"] != null)) {
                     base.Tables.Add(new Bukti_BBKDataTable(ds.Tables["Bukti BBK"]));
                 }
                 if ((ds.Tables["Laporan_Perkiraan"] != null)) {
                     base.Tables.Add(new Laporan_PerkiraanDataTable(ds.Tables["Laporan_Perkiraan"]));
+                }
+                if ((ds.Tables["bukti_kas_keluar"] != null)) {
+                    base.Tables.Add(new bukti_kas_keluarDataTable(ds.Tables["bukti_kas_keluar"]));
+                }
+                if ((ds.Tables["aging_hutang"] != null)) {
+                    base.Tables.Add(new aging_hutangDataTable(ds.Tables["aging_hutang"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -119,9 +129,9 @@ namespace report_manajemen.Dataset {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public AgingPiutangRekapPeriodDataTable AgingPiutangRekapPeriod {
+        public aging_piutang_rekapDataTable aging_piutang_rekap {
             get {
-                return this.tableAgingPiutangRekapPeriod;
+                return this.tableaging_piutang_rekap;
             }
         }
         
@@ -142,6 +152,26 @@ namespace report_manajemen.Dataset {
         public Laporan_PerkiraanDataTable Laporan_Perkiraan {
             get {
                 return this.tableLaporan_Perkiraan;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public bukti_kas_keluarDataTable bukti_kas_keluar {
+            get {
+                return this.tablebukti_kas_keluar;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public aging_hutangDataTable aging_hutang {
+            get {
+                return this.tableaging_hutang;
             }
         }
         
@@ -218,14 +248,20 @@ namespace report_manajemen.Dataset {
                 if ((ds.Tables["aging_piutang"] != null)) {
                     base.Tables.Add(new aging_piutangDataTable(ds.Tables["aging_piutang"]));
                 }
-                if ((ds.Tables["AgingPiutangRekapPeriod"] != null)) {
-                    base.Tables.Add(new AgingPiutangRekapPeriodDataTable(ds.Tables["AgingPiutangRekapPeriod"]));
+                if ((ds.Tables["aging_piutang_rekap"] != null)) {
+                    base.Tables.Add(new aging_piutang_rekapDataTable(ds.Tables["aging_piutang_rekap"]));
                 }
                 if ((ds.Tables["Bukti BBK"] != null)) {
                     base.Tables.Add(new Bukti_BBKDataTable(ds.Tables["Bukti BBK"]));
                 }
                 if ((ds.Tables["Laporan_Perkiraan"] != null)) {
                     base.Tables.Add(new Laporan_PerkiraanDataTable(ds.Tables["Laporan_Perkiraan"]));
+                }
+                if ((ds.Tables["bukti_kas_keluar"] != null)) {
+                    base.Tables.Add(new bukti_kas_keluarDataTable(ds.Tables["bukti_kas_keluar"]));
+                }
+                if ((ds.Tables["aging_hutang"] != null)) {
+                    base.Tables.Add(new aging_hutangDataTable(ds.Tables["aging_hutang"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -272,10 +308,10 @@ namespace report_manajemen.Dataset {
                     this.tableaging_piutang.InitVars();
                 }
             }
-            this.tableAgingPiutangRekapPeriod = ((AgingPiutangRekapPeriodDataTable)(base.Tables["AgingPiutangRekapPeriod"]));
+            this.tableaging_piutang_rekap = ((aging_piutang_rekapDataTable)(base.Tables["aging_piutang_rekap"]));
             if ((initTable == true)) {
-                if ((this.tableAgingPiutangRekapPeriod != null)) {
-                    this.tableAgingPiutangRekapPeriod.InitVars();
+                if ((this.tableaging_piutang_rekap != null)) {
+                    this.tableaging_piutang_rekap.InitVars();
                 }
             }
             this.tableBukti_BBK = ((Bukti_BBKDataTable)(base.Tables["Bukti BBK"]));
@@ -288,6 +324,18 @@ namespace report_manajemen.Dataset {
             if ((initTable == true)) {
                 if ((this.tableLaporan_Perkiraan != null)) {
                     this.tableLaporan_Perkiraan.InitVars();
+                }
+            }
+            this.tablebukti_kas_keluar = ((bukti_kas_keluarDataTable)(base.Tables["bukti_kas_keluar"]));
+            if ((initTable == true)) {
+                if ((this.tablebukti_kas_keluar != null)) {
+                    this.tablebukti_kas_keluar.InitVars();
+                }
+            }
+            this.tableaging_hutang = ((aging_hutangDataTable)(base.Tables["aging_hutang"]));
+            if ((initTable == true)) {
+                if ((this.tableaging_hutang != null)) {
+                    this.tableaging_hutang.InitVars();
                 }
             }
         }
@@ -304,12 +352,16 @@ namespace report_manajemen.Dataset {
             base.Tables.Add(this.tablevw_rpt_partner_aging_hutang);
             this.tableaging_piutang = new aging_piutangDataTable();
             base.Tables.Add(this.tableaging_piutang);
-            this.tableAgingPiutangRekapPeriod = new AgingPiutangRekapPeriodDataTable();
-            base.Tables.Add(this.tableAgingPiutangRekapPeriod);
+            this.tableaging_piutang_rekap = new aging_piutang_rekapDataTable();
+            base.Tables.Add(this.tableaging_piutang_rekap);
             this.tableBukti_BBK = new Bukti_BBKDataTable();
             base.Tables.Add(this.tableBukti_BBK);
             this.tableLaporan_Perkiraan = new Laporan_PerkiraanDataTable();
             base.Tables.Add(this.tableLaporan_Perkiraan);
+            this.tablebukti_kas_keluar = new bukti_kas_keluarDataTable();
+            base.Tables.Add(this.tablebukti_kas_keluar);
+            this.tableaging_hutang = new aging_hutangDataTable();
+            base.Tables.Add(this.tableaging_hutang);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -326,7 +378,7 @@ namespace report_manajemen.Dataset {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeAgingPiutangRekapPeriod() {
+        private bool ShouldSerializeaging_piutang_rekap() {
             return false;
         }
         
@@ -339,6 +391,18 @@ namespace report_manajemen.Dataset {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializeLaporan_Perkiraan() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializebukti_kas_keluar() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeaging_hutang() {
             return false;
         }
         
@@ -404,13 +468,19 @@ namespace report_manajemen.Dataset {
         public delegate void aging_piutangRowChangeEventHandler(object sender, aging_piutangRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void AgingPiutangRekapPeriodRowChangeEventHandler(object sender, AgingPiutangRekapPeriodRowChangeEvent e);
+        public delegate void aging_piutang_rekapRowChangeEventHandler(object sender, aging_piutang_rekapRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void Bukti_BBKRowChangeEventHandler(object sender, Bukti_BBKRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void Laporan_PerkiraanRowChangeEventHandler(object sender, Laporan_PerkiraanRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void bukti_kas_keluarRowChangeEventHandler(object sender, bukti_kas_keluarRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void aging_hutangRowChangeEventHandler(object sender, aging_hutangRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -1370,7 +1440,7 @@ namespace report_manajemen.Dataset {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class AgingPiutangRekapPeriodDataTable : global::System.Data.TypedTableBase<AgingPiutangRekapPeriodRow> {
+        public partial class aging_piutang_rekapDataTable : global::System.Data.TypedTableBase<aging_piutang_rekapRow> {
             
             private global::System.Data.DataColumn columnTgl_Trans;
             
@@ -1416,8 +1486,8 @@ namespace report_manajemen.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public AgingPiutangRekapPeriodDataTable() {
-                this.TableName = "AgingPiutangRekapPeriod";
+            public aging_piutang_rekapDataTable() {
+                this.TableName = "aging_piutang_rekap";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1425,7 +1495,7 @@ namespace report_manajemen.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal AgingPiutangRekapPeriodDataTable(global::System.Data.DataTable table) {
+            internal aging_piutang_rekapDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1442,7 +1512,7 @@ namespace report_manajemen.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected AgingPiutangRekapPeriodDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected aging_piutang_rekapDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -1626,33 +1696,33 @@ namespace report_manajemen.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public AgingPiutangRekapPeriodRow this[int index] {
+            public aging_piutang_rekapRow this[int index] {
                 get {
-                    return ((AgingPiutangRekapPeriodRow)(this.Rows[index]));
+                    return ((aging_piutang_rekapRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event AgingPiutangRekapPeriodRowChangeEventHandler AgingPiutangRekapPeriodRowChanging;
+            public event aging_piutang_rekapRowChangeEventHandler aging_piutang_rekapRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event AgingPiutangRekapPeriodRowChangeEventHandler AgingPiutangRekapPeriodRowChanged;
+            public event aging_piutang_rekapRowChangeEventHandler aging_piutang_rekapRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event AgingPiutangRekapPeriodRowChangeEventHandler AgingPiutangRekapPeriodRowDeleting;
+            public event aging_piutang_rekapRowChangeEventHandler aging_piutang_rekapRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event AgingPiutangRekapPeriodRowChangeEventHandler AgingPiutangRekapPeriodRowDeleted;
+            public event aging_piutang_rekapRowChangeEventHandler aging_piutang_rekapRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddAgingPiutangRekapPeriodRow(AgingPiutangRekapPeriodRow row) {
+            public void Addaging_piutang_rekapRow(aging_piutang_rekapRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public AgingPiutangRekapPeriodRow AddAgingPiutangRekapPeriodRow(
+            public aging_piutang_rekapRow Addaging_piutang_rekapRow(
                         System.DateTime Tgl_Trans, 
                         string Partner_ID, 
                         string Tipe_Invoice, 
@@ -1674,7 +1744,7 @@ namespace report_manajemen.Dataset {
                         System.DateTime begin_date, 
                         System.DateTime end_date, 
                         int Periode) {
-                AgingPiutangRekapPeriodRow rowAgingPiutangRekapPeriodRow = ((AgingPiutangRekapPeriodRow)(this.NewRow()));
+                aging_piutang_rekapRow rowaging_piutang_rekapRow = ((aging_piutang_rekapRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Tgl_Trans,
                         Partner_ID,
@@ -1697,15 +1767,15 @@ namespace report_manajemen.Dataset {
                         begin_date,
                         end_date,
                         Periode};
-                rowAgingPiutangRekapPeriodRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowAgingPiutangRekapPeriodRow);
-                return rowAgingPiutangRekapPeriodRow;
+                rowaging_piutang_rekapRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowaging_piutang_rekapRow);
+                return rowaging_piutang_rekapRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                AgingPiutangRekapPeriodDataTable cln = ((AgingPiutangRekapPeriodDataTable)(base.Clone()));
+                aging_piutang_rekapDataTable cln = ((aging_piutang_rekapDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1713,7 +1783,7 @@ namespace report_manajemen.Dataset {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new AgingPiutangRekapPeriodDataTable();
+                return new aging_piutang_rekapDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1804,28 +1874,28 @@ namespace report_manajemen.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public AgingPiutangRekapPeriodRow NewAgingPiutangRekapPeriodRow() {
-                return ((AgingPiutangRekapPeriodRow)(this.NewRow()));
+            public aging_piutang_rekapRow Newaging_piutang_rekapRow() {
+                return ((aging_piutang_rekapRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new AgingPiutangRekapPeriodRow(builder);
+                return new aging_piutang_rekapRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(AgingPiutangRekapPeriodRow);
+                return typeof(aging_piutang_rekapRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.AgingPiutangRekapPeriodRowChanged != null)) {
-                    this.AgingPiutangRekapPeriodRowChanged(this, new AgingPiutangRekapPeriodRowChangeEvent(((AgingPiutangRekapPeriodRow)(e.Row)), e.Action));
+                if ((this.aging_piutang_rekapRowChanged != null)) {
+                    this.aging_piutang_rekapRowChanged(this, new aging_piutang_rekapRowChangeEvent(((aging_piutang_rekapRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1833,8 +1903,8 @@ namespace report_manajemen.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.AgingPiutangRekapPeriodRowChanging != null)) {
-                    this.AgingPiutangRekapPeriodRowChanging(this, new AgingPiutangRekapPeriodRowChangeEvent(((AgingPiutangRekapPeriodRow)(e.Row)), e.Action));
+                if ((this.aging_piutang_rekapRowChanging != null)) {
+                    this.aging_piutang_rekapRowChanging(this, new aging_piutang_rekapRowChangeEvent(((aging_piutang_rekapRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1842,8 +1912,8 @@ namespace report_manajemen.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.AgingPiutangRekapPeriodRowDeleted != null)) {
-                    this.AgingPiutangRekapPeriodRowDeleted(this, new AgingPiutangRekapPeriodRowChangeEvent(((AgingPiutangRekapPeriodRow)(e.Row)), e.Action));
+                if ((this.aging_piutang_rekapRowDeleted != null)) {
+                    this.aging_piutang_rekapRowDeleted(this, new aging_piutang_rekapRowChangeEvent(((aging_piutang_rekapRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1851,14 +1921,14 @@ namespace report_manajemen.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.AgingPiutangRekapPeriodRowDeleting != null)) {
-                    this.AgingPiutangRekapPeriodRowDeleting(this, new AgingPiutangRekapPeriodRowChangeEvent(((AgingPiutangRekapPeriodRow)(e.Row)), e.Action));
+                if ((this.aging_piutang_rekapRowDeleting != null)) {
+                    this.aging_piutang_rekapRowDeleting(this, new aging_piutang_rekapRowChangeEvent(((aging_piutang_rekapRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveAgingPiutangRekapPeriodRow(AgingPiutangRekapPeriodRow row) {
+            public void Removeaging_piutang_rekapRow(aging_piutang_rekapRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1885,7 +1955,7 @@ namespace report_manajemen.Dataset {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "AgingPiutangRekapPeriodDataTable";
+                attribute2.FixedValue = "aging_piutang_rekapDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2656,6 +2726,895 @@ namespace report_manajemen.Dataset {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "Laporan_PerkiraanDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class bukti_kas_keluarDataTable : global::System.Data.TypedTableBase<bukti_kas_keluarRow> {
+            
+            private global::System.Data.DataColumn columnTanggal_Bukti;
+            
+            private global::System.Data.DataColumn columnNo_Bukti;
+            
+            private global::System.Data.DataColumn columnKode_Kas;
+            
+            private global::System.Data.DataColumn columnNama_Kas;
+            
+            private global::System.Data.DataColumn columnNo_Akun;
+            
+            private global::System.Data.DataColumn columnNama_Akun;
+            
+            private global::System.Data.DataColumn columnKeterangan2;
+            
+            private global::System.Data.DataColumn columnDoc_Reff;
+            
+            private global::System.Data.DataColumn columnDebet;
+            
+            private global::System.Data.DataColumn columnPeriode;
+            
+            private global::System.Data.DataColumn columnKeterangan;
+            
+            private global::System.Data.DataColumn columnproject_id;
+            
+            private global::System.Data.DataColumn columnproject_name;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bukti_kas_keluarDataTable() {
+                this.TableName = "bukti_kas_keluar";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal bukti_kas_keluarDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected bukti_kas_keluarDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Tanggal_BuktiColumn {
+                get {
+                    return this.columnTanggal_Bukti;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn No_BuktiColumn {
+                get {
+                    return this.columnNo_Bukti;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Kode_KasColumn {
+                get {
+                    return this.columnKode_Kas;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Nama_KasColumn {
+                get {
+                    return this.columnNama_Kas;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn No_AkunColumn {
+                get {
+                    return this.columnNo_Akun;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Nama_AkunColumn {
+                get {
+                    return this.columnNama_Akun;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Keterangan2Column {
+                get {
+                    return this.columnKeterangan2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Doc_ReffColumn {
+                get {
+                    return this.columnDoc_Reff;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DebetColumn {
+                get {
+                    return this.columnDebet;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PeriodeColumn {
+                get {
+                    return this.columnPeriode;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn KeteranganColumn {
+                get {
+                    return this.columnKeterangan;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn project_idColumn {
+                get {
+                    return this.columnproject_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn project_nameColumn {
+                get {
+                    return this.columnproject_name;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bukti_kas_keluarRow this[int index] {
+                get {
+                    return ((bukti_kas_keluarRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event bukti_kas_keluarRowChangeEventHandler bukti_kas_keluarRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event bukti_kas_keluarRowChangeEventHandler bukti_kas_keluarRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event bukti_kas_keluarRowChangeEventHandler bukti_kas_keluarRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event bukti_kas_keluarRowChangeEventHandler bukti_kas_keluarRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Addbukti_kas_keluarRow(bukti_kas_keluarRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bukti_kas_keluarRow Addbukti_kas_keluarRow(System.DateTime Tanggal_Bukti, string No_Bukti, string Kode_Kas, string Nama_Kas, string No_Akun, string Nama_Akun, string Keterangan2, string Doc_Reff, decimal Debet, int Periode, string Keterangan, string project_id, string project_name) {
+                bukti_kas_keluarRow rowbukti_kas_keluarRow = ((bukti_kas_keluarRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        Tanggal_Bukti,
+                        No_Bukti,
+                        Kode_Kas,
+                        Nama_Kas,
+                        No_Akun,
+                        Nama_Akun,
+                        Keterangan2,
+                        Doc_Reff,
+                        Debet,
+                        Periode,
+                        Keterangan,
+                        project_id,
+                        project_name};
+                rowbukti_kas_keluarRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowbukti_kas_keluarRow);
+                return rowbukti_kas_keluarRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bukti_kas_keluarRow FindByNo_Bukti(string No_Bukti) {
+                return ((bukti_kas_keluarRow)(this.Rows.Find(new object[] {
+                            No_Bukti})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                bukti_kas_keluarDataTable cln = ((bukti_kas_keluarDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new bukti_kas_keluarDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnTanggal_Bukti = base.Columns["Tanggal Bukti"];
+                this.columnNo_Bukti = base.Columns["No Bukti"];
+                this.columnKode_Kas = base.Columns["Kode Kas"];
+                this.columnNama_Kas = base.Columns["Nama Kas"];
+                this.columnNo_Akun = base.Columns["No Akun"];
+                this.columnNama_Akun = base.Columns["Nama Akun"];
+                this.columnKeterangan2 = base.Columns["Keterangan2"];
+                this.columnDoc_Reff = base.Columns["Doc Reff"];
+                this.columnDebet = base.Columns["Debet"];
+                this.columnPeriode = base.Columns["Periode"];
+                this.columnKeterangan = base.Columns["Keterangan"];
+                this.columnproject_id = base.Columns["project_id"];
+                this.columnproject_name = base.Columns["project_name"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnTanggal_Bukti = new global::System.Data.DataColumn("Tanggal Bukti", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTanggal_Bukti);
+                this.columnNo_Bukti = new global::System.Data.DataColumn("No Bukti", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNo_Bukti);
+                this.columnKode_Kas = new global::System.Data.DataColumn("Kode Kas", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKode_Kas);
+                this.columnNama_Kas = new global::System.Data.DataColumn("Nama Kas", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNama_Kas);
+                this.columnNo_Akun = new global::System.Data.DataColumn("No Akun", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNo_Akun);
+                this.columnNama_Akun = new global::System.Data.DataColumn("Nama Akun", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNama_Akun);
+                this.columnKeterangan2 = new global::System.Data.DataColumn("Keterangan2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKeterangan2);
+                this.columnDoc_Reff = new global::System.Data.DataColumn("Doc Reff", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDoc_Reff);
+                this.columnDebet = new global::System.Data.DataColumn("Debet", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDebet);
+                this.columnPeriode = new global::System.Data.DataColumn("Periode", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPeriode);
+                this.columnKeterangan = new global::System.Data.DataColumn("Keterangan", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKeterangan);
+                this.columnproject_id = new global::System.Data.DataColumn("project_id", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnproject_id);
+                this.columnproject_name = new global::System.Data.DataColumn("project_name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnproject_name);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnNo_Bukti}, true));
+                this.columnNo_Bukti.AllowDBNull = false;
+                this.columnNo_Bukti.Unique = true;
+                this.columnNo_Bukti.MaxLength = 16;
+                this.columnKode_Kas.MaxLength = 25;
+                this.columnNama_Kas.MaxLength = 100;
+                this.columnNo_Akun.MaxLength = 25;
+                this.columnNama_Akun.MaxLength = 100;
+                this.columnKeterangan2.MaxLength = 250;
+                this.columnDoc_Reff.MaxLength = 25;
+                this.columnKeterangan.MaxLength = 250;
+                this.columnproject_id.MaxLength = 15;
+                this.columnproject_name.MaxLength = 50;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bukti_kas_keluarRow Newbukti_kas_keluarRow() {
+                return ((bukti_kas_keluarRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new bukti_kas_keluarRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(bukti_kas_keluarRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.bukti_kas_keluarRowChanged != null)) {
+                    this.bukti_kas_keluarRowChanged(this, new bukti_kas_keluarRowChangeEvent(((bukti_kas_keluarRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.bukti_kas_keluarRowChanging != null)) {
+                    this.bukti_kas_keluarRowChanging(this, new bukti_kas_keluarRowChangeEvent(((bukti_kas_keluarRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.bukti_kas_keluarRowDeleted != null)) {
+                    this.bukti_kas_keluarRowDeleted(this, new bukti_kas_keluarRowChangeEvent(((bukti_kas_keluarRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.bukti_kas_keluarRowDeleting != null)) {
+                    this.bukti_kas_keluarRowDeleting(this, new bukti_kas_keluarRowChangeEvent(((bukti_kas_keluarRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Removebukti_kas_keluarRow(bukti_kas_keluarRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                BonaDataset ds = new BonaDataset();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "bukti_kas_keluarDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class aging_hutangDataTable : global::System.Data.TypedTableBase<aging_hutangRow> {
+            
+            private global::System.Data.DataColumn columnTgl_Trans;
+            
+            private global::System.Data.DataColumn columnPartner_ID;
+            
+            private global::System.Data.DataColumn columnTipe_Invoice;
+            
+            private global::System.Data.DataColumn columnSupplier;
+            
+            private global::System.Data.DataColumn columnNo_Bukti;
+            
+            private global::System.Data.DataColumn columnNo_Ref;
+            
+            private global::System.Data.DataColumn columnTipe_Partner;
+            
+            private global::System.Data.DataColumn columnHarga;
+            
+            private global::System.Data.DataColumn columnTgl_Jatuh_Tempo;
+            
+            private global::System.Data.DataColumn columnTypeTrans;
+            
+            private global::System.Data.DataColumn columnterm_days;
+            
+            private global::System.Data.DataColumn columnreminder_days;
+            
+            private global::System.Data.DataColumn columnBatas_Bayar;
+            
+            private global::System.Data.DataColumn columnReminder_Bayar;
+            
+            private global::System.Data.DataColumn columnDateTrans;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public aging_hutangDataTable() {
+                this.TableName = "aging_hutang";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal aging_hutangDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected aging_hutangDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Tgl_TransColumn {
+                get {
+                    return this.columnTgl_Trans;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Partner_IDColumn {
+                get {
+                    return this.columnPartner_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Tipe_InvoiceColumn {
+                get {
+                    return this.columnTipe_Invoice;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SupplierColumn {
+                get {
+                    return this.columnSupplier;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn No_BuktiColumn {
+                get {
+                    return this.columnNo_Bukti;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn No_RefColumn {
+                get {
+                    return this.columnNo_Ref;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Tipe_PartnerColumn {
+                get {
+                    return this.columnTipe_Partner;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn HargaColumn {
+                get {
+                    return this.columnHarga;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Tgl_Jatuh_TempoColumn {
+                get {
+                    return this.columnTgl_Jatuh_Tempo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TypeTransColumn {
+                get {
+                    return this.columnTypeTrans;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn term_daysColumn {
+                get {
+                    return this.columnterm_days;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn reminder_daysColumn {
+                get {
+                    return this.columnreminder_days;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Batas_BayarColumn {
+                get {
+                    return this.columnBatas_Bayar;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Reminder_BayarColumn {
+                get {
+                    return this.columnReminder_Bayar;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DateTransColumn {
+                get {
+                    return this.columnDateTrans;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public aging_hutangRow this[int index] {
+                get {
+                    return ((aging_hutangRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event aging_hutangRowChangeEventHandler aging_hutangRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event aging_hutangRowChangeEventHandler aging_hutangRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event aging_hutangRowChangeEventHandler aging_hutangRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event aging_hutangRowChangeEventHandler aging_hutangRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Addaging_hutangRow(aging_hutangRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public aging_hutangRow Addaging_hutangRow(System.DateTime Tgl_Trans, string Partner_ID, string Tipe_Invoice, string Supplier, string No_Bukti, string No_Ref, string Tipe_Partner, decimal Harga, System.DateTime Tgl_Jatuh_Tempo, string TypeTrans, int term_days, int reminder_days, decimal Batas_Bayar, decimal Reminder_Bayar, System.DateTime DateTrans) {
+                aging_hutangRow rowaging_hutangRow = ((aging_hutangRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        Tgl_Trans,
+                        Partner_ID,
+                        Tipe_Invoice,
+                        Supplier,
+                        No_Bukti,
+                        No_Ref,
+                        Tipe_Partner,
+                        Harga,
+                        Tgl_Jatuh_Tempo,
+                        TypeTrans,
+                        term_days,
+                        reminder_days,
+                        Batas_Bayar,
+                        Reminder_Bayar,
+                        DateTrans};
+                rowaging_hutangRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowaging_hutangRow);
+                return rowaging_hutangRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                aging_hutangDataTable cln = ((aging_hutangDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new aging_hutangDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnTgl_Trans = base.Columns["Tgl Trans"];
+                this.columnPartner_ID = base.Columns["Partner ID"];
+                this.columnTipe_Invoice = base.Columns["Tipe Invoice"];
+                this.columnSupplier = base.Columns["Supplier"];
+                this.columnNo_Bukti = base.Columns["No Bukti"];
+                this.columnNo_Ref = base.Columns["No Ref"];
+                this.columnTipe_Partner = base.Columns["Tipe Partner"];
+                this.columnHarga = base.Columns["Harga"];
+                this.columnTgl_Jatuh_Tempo = base.Columns["Tgl Jatuh Tempo"];
+                this.columnTypeTrans = base.Columns["TypeTrans"];
+                this.columnterm_days = base.Columns["term_days"];
+                this.columnreminder_days = base.Columns["reminder_days"];
+                this.columnBatas_Bayar = base.Columns["Batas Bayar"];
+                this.columnReminder_Bayar = base.Columns["Reminder Bayar"];
+                this.columnDateTrans = base.Columns["DateTrans"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnTgl_Trans = new global::System.Data.DataColumn("Tgl Trans", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTgl_Trans);
+                this.columnPartner_ID = new global::System.Data.DataColumn("Partner ID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPartner_ID);
+                this.columnTipe_Invoice = new global::System.Data.DataColumn("Tipe Invoice", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTipe_Invoice);
+                this.columnSupplier = new global::System.Data.DataColumn("Supplier", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSupplier);
+                this.columnNo_Bukti = new global::System.Data.DataColumn("No Bukti", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNo_Bukti);
+                this.columnNo_Ref = new global::System.Data.DataColumn("No Ref", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNo_Ref);
+                this.columnTipe_Partner = new global::System.Data.DataColumn("Tipe Partner", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTipe_Partner);
+                this.columnHarga = new global::System.Data.DataColumn("Harga", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHarga);
+                this.columnTgl_Jatuh_Tempo = new global::System.Data.DataColumn("Tgl Jatuh Tempo", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTgl_Jatuh_Tempo);
+                this.columnTypeTrans = new global::System.Data.DataColumn("TypeTrans", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTypeTrans);
+                this.columnterm_days = new global::System.Data.DataColumn("term_days", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnterm_days);
+                this.columnreminder_days = new global::System.Data.DataColumn("reminder_days", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnreminder_days);
+                this.columnBatas_Bayar = new global::System.Data.DataColumn("Batas Bayar", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBatas_Bayar);
+                this.columnReminder_Bayar = new global::System.Data.DataColumn("Reminder Bayar", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnReminder_Bayar);
+                this.columnDateTrans = new global::System.Data.DataColumn("DateTrans", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDateTrans);
+                this.columnPartner_ID.MaxLength = 15;
+                this.columnTipe_Invoice.MaxLength = 25;
+                this.columnSupplier.MaxLength = 100;
+                this.columnNo_Bukti.MaxLength = 200;
+                this.columnNo_Ref.MaxLength = 25;
+                this.columnTipe_Partner.MaxLength = 15;
+                this.columnTgl_Jatuh_Tempo.ReadOnly = true;
+                this.columnTypeTrans.MaxLength = 15;
+                this.columnBatas_Bayar.ReadOnly = true;
+                this.columnReminder_Bayar.ReadOnly = true;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public aging_hutangRow Newaging_hutangRow() {
+                return ((aging_hutangRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new aging_hutangRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(aging_hutangRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.aging_hutangRowChanged != null)) {
+                    this.aging_hutangRowChanged(this, new aging_hutangRowChangeEvent(((aging_hutangRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.aging_hutangRowChanging != null)) {
+                    this.aging_hutangRowChanging(this, new aging_hutangRowChangeEvent(((aging_hutangRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.aging_hutangRowDeleted != null)) {
+                    this.aging_hutangRowDeleted(this, new aging_hutangRowChangeEvent(((aging_hutangRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.aging_hutangRowDeleting != null)) {
+                    this.aging_hutangRowDeleting(this, new aging_hutangRowChangeEvent(((aging_hutangRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Removeaging_hutangRow(aging_hutangRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                BonaDataset ds = new BonaDataset();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "aging_hutangDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -3638,15 +4597,15 @@ namespace report_manajemen.Dataset {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class AgingPiutangRekapPeriodRow : global::System.Data.DataRow {
+        public partial class aging_piutang_rekapRow : global::System.Data.DataRow {
             
-            private AgingPiutangRekapPeriodDataTable tableAgingPiutangRekapPeriod;
+            private aging_piutang_rekapDataTable tableaging_piutang_rekap;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal AgingPiutangRekapPeriodRow(global::System.Data.DataRowBuilder rb) : 
+            internal aging_piutang_rekapRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableAgingPiutangRekapPeriod = ((AgingPiutangRekapPeriodDataTable)(this.Table));
+                this.tableaging_piutang_rekap = ((aging_piutang_rekapDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3654,14 +4613,14 @@ namespace report_manajemen.Dataset {
             public System.DateTime Tgl_Trans {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableAgingPiutangRekapPeriod.Tgl_TransColumn]));
+                        return ((global::System.DateTime)(this[this.tableaging_piutang_rekap.Tgl_TransColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Tgl Trans\' in table \'AgingPiutangRekapPeriod\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Tgl Trans\' in table \'aging_piutang_rekap\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAgingPiutangRekapPeriod.Tgl_TransColumn] = value;
+                    this[this.tableaging_piutang_rekap.Tgl_TransColumn] = value;
                 }
             }
             
@@ -3670,14 +4629,14 @@ namespace report_manajemen.Dataset {
             public string Partner_ID {
                 get {
                     try {
-                        return ((string)(this[this.tableAgingPiutangRekapPeriod.Partner_IDColumn]));
+                        return ((string)(this[this.tableaging_piutang_rekap.Partner_IDColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Partner ID\' in table \'AgingPiutangRekapPeriod\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Partner ID\' in table \'aging_piutang_rekap\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAgingPiutangRekapPeriod.Partner_IDColumn] = value;
+                    this[this.tableaging_piutang_rekap.Partner_IDColumn] = value;
                 }
             }
             
@@ -3686,15 +4645,14 @@ namespace report_manajemen.Dataset {
             public string Tipe_Invoice {
                 get {
                     try {
-                        return ((string)(this[this.tableAgingPiutangRekapPeriod.Tipe_InvoiceColumn]));
+                        return ((string)(this[this.tableaging_piutang_rekap.Tipe_InvoiceColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Tipe Invoice\' in table \'AgingPiutangRekapPeriod\' is DBNull." +
-                                "", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Tipe Invoice\' in table \'aging_piutang_rekap\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAgingPiutangRekapPeriod.Tipe_InvoiceColumn] = value;
+                    this[this.tableaging_piutang_rekap.Tipe_InvoiceColumn] = value;
                 }
             }
             
@@ -3703,14 +4661,14 @@ namespace report_manajemen.Dataset {
             public string Customer {
                 get {
                     try {
-                        return ((string)(this[this.tableAgingPiutangRekapPeriod.CustomerColumn]));
+                        return ((string)(this[this.tableaging_piutang_rekap.CustomerColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Customer\' in table \'AgingPiutangRekapPeriod\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Customer\' in table \'aging_piutang_rekap\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAgingPiutangRekapPeriod.CustomerColumn] = value;
+                    this[this.tableaging_piutang_rekap.CustomerColumn] = value;
                 }
             }
             
@@ -3719,14 +4677,14 @@ namespace report_manajemen.Dataset {
             public string No_Bukti {
                 get {
                     try {
-                        return ((string)(this[this.tableAgingPiutangRekapPeriod.No_BuktiColumn]));
+                        return ((string)(this[this.tableaging_piutang_rekap.No_BuktiColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'No Bukti\' in table \'AgingPiutangRekapPeriod\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'No Bukti\' in table \'aging_piutang_rekap\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAgingPiutangRekapPeriod.No_BuktiColumn] = value;
+                    this[this.tableaging_piutang_rekap.No_BuktiColumn] = value;
                 }
             }
             
@@ -3735,14 +4693,14 @@ namespace report_manajemen.Dataset {
             public string No_Ref {
                 get {
                     try {
-                        return ((string)(this[this.tableAgingPiutangRekapPeriod.No_RefColumn]));
+                        return ((string)(this[this.tableaging_piutang_rekap.No_RefColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'No Ref\' in table \'AgingPiutangRekapPeriod\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'No Ref\' in table \'aging_piutang_rekap\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAgingPiutangRekapPeriod.No_RefColumn] = value;
+                    this[this.tableaging_piutang_rekap.No_RefColumn] = value;
                 }
             }
             
@@ -3751,15 +4709,14 @@ namespace report_manajemen.Dataset {
             public string Tipe_Partner {
                 get {
                     try {
-                        return ((string)(this[this.tableAgingPiutangRekapPeriod.Tipe_PartnerColumn]));
+                        return ((string)(this[this.tableaging_piutang_rekap.Tipe_PartnerColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Tipe Partner\' in table \'AgingPiutangRekapPeriod\' is DBNull." +
-                                "", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Tipe Partner\' in table \'aging_piutang_rekap\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAgingPiutangRekapPeriod.Tipe_PartnerColumn] = value;
+                    this[this.tableaging_piutang_rekap.Tipe_PartnerColumn] = value;
                 }
             }
             
@@ -3768,14 +4725,14 @@ namespace report_manajemen.Dataset {
             public decimal Harga {
                 get {
                     try {
-                        return ((decimal)(this[this.tableAgingPiutangRekapPeriod.HargaColumn]));
+                        return ((decimal)(this[this.tableaging_piutang_rekap.HargaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Harga\' in table \'AgingPiutangRekapPeriod\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Harga\' in table \'aging_piutang_rekap\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAgingPiutangRekapPeriod.HargaColumn] = value;
+                    this[this.tableaging_piutang_rekap.HargaColumn] = value;
                 }
             }
             
@@ -3784,15 +4741,14 @@ namespace report_manajemen.Dataset {
             public System.DateTime Tgl_Jatuh_Tempo {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableAgingPiutangRekapPeriod.Tgl_Jatuh_TempoColumn]));
+                        return ((global::System.DateTime)(this[this.tableaging_piutang_rekap.Tgl_Jatuh_TempoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Tgl Jatuh Tempo\' in table \'AgingPiutangRekapPeriod\' is DBNu" +
-                                "ll.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Tgl Jatuh Tempo\' in table \'aging_piutang_rekap\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAgingPiutangRekapPeriod.Tgl_Jatuh_TempoColumn] = value;
+                    this[this.tableaging_piutang_rekap.Tgl_Jatuh_TempoColumn] = value;
                 }
             }
             
@@ -3801,14 +4757,14 @@ namespace report_manajemen.Dataset {
             public string TypeTrans {
                 get {
                     try {
-                        return ((string)(this[this.tableAgingPiutangRekapPeriod.TypeTransColumn]));
+                        return ((string)(this[this.tableaging_piutang_rekap.TypeTransColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TypeTrans\' in table \'AgingPiutangRekapPeriod\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'TypeTrans\' in table \'aging_piutang_rekap\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAgingPiutangRekapPeriod.TypeTransColumn] = value;
+                    this[this.tableaging_piutang_rekap.TypeTransColumn] = value;
                 }
             }
             
@@ -3817,14 +4773,14 @@ namespace report_manajemen.Dataset {
             public int term_days {
                 get {
                     try {
-                        return ((int)(this[this.tableAgingPiutangRekapPeriod.term_daysColumn]));
+                        return ((int)(this[this.tableaging_piutang_rekap.term_daysColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'term_days\' in table \'AgingPiutangRekapPeriod\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'term_days\' in table \'aging_piutang_rekap\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAgingPiutangRekapPeriod.term_daysColumn] = value;
+                    this[this.tableaging_piutang_rekap.term_daysColumn] = value;
                 }
             }
             
@@ -3833,15 +4789,14 @@ namespace report_manajemen.Dataset {
             public int reminder_days {
                 get {
                     try {
-                        return ((int)(this[this.tableAgingPiutangRekapPeriod.reminder_daysColumn]));
+                        return ((int)(this[this.tableaging_piutang_rekap.reminder_daysColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'reminder_days\' in table \'AgingPiutangRekapPeriod\' is DBNull" +
-                                ".", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'reminder_days\' in table \'aging_piutang_rekap\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAgingPiutangRekapPeriod.reminder_daysColumn] = value;
+                    this[this.tableaging_piutang_rekap.reminder_daysColumn] = value;
                 }
             }
             
@@ -3850,14 +4805,14 @@ namespace report_manajemen.Dataset {
             public decimal Batas_Bayar {
                 get {
                     try {
-                        return ((decimal)(this[this.tableAgingPiutangRekapPeriod.Batas_BayarColumn]));
+                        return ((decimal)(this[this.tableaging_piutang_rekap.Batas_BayarColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Batas Bayar\' in table \'AgingPiutangRekapPeriod\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Batas Bayar\' in table \'aging_piutang_rekap\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAgingPiutangRekapPeriod.Batas_BayarColumn] = value;
+                    this[this.tableaging_piutang_rekap.Batas_BayarColumn] = value;
                 }
             }
             
@@ -3866,15 +4821,14 @@ namespace report_manajemen.Dataset {
             public decimal Reminder_Bayar {
                 get {
                     try {
-                        return ((decimal)(this[this.tableAgingPiutangRekapPeriod.Reminder_BayarColumn]));
+                        return ((decimal)(this[this.tableaging_piutang_rekap.Reminder_BayarColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Reminder Bayar\' in table \'AgingPiutangRekapPeriod\' is DBNul" +
-                                "l.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Reminder Bayar\' in table \'aging_piutang_rekap\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAgingPiutangRekapPeriod.Reminder_BayarColumn] = value;
+                    this[this.tableaging_piutang_rekap.Reminder_BayarColumn] = value;
                 }
             }
             
@@ -3883,14 +4837,14 @@ namespace report_manajemen.Dataset {
             public System.DateTime DateTrans {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableAgingPiutangRekapPeriod.DateTransColumn]));
+                        return ((global::System.DateTime)(this[this.tableaging_piutang_rekap.DateTransColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DateTrans\' in table \'AgingPiutangRekapPeriod\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'DateTrans\' in table \'aging_piutang_rekap\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAgingPiutangRekapPeriod.DateTransColumn] = value;
+                    this[this.tableaging_piutang_rekap.DateTransColumn] = value;
                 }
             }
             
@@ -3899,14 +4853,14 @@ namespace report_manajemen.Dataset {
             public string no_invoice {
                 get {
                     try {
-                        return ((string)(this[this.tableAgingPiutangRekapPeriod.no_invoiceColumn]));
+                        return ((string)(this[this.tableaging_piutang_rekap.no_invoiceColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'no_invoice\' in table \'AgingPiutangRekapPeriod\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'no_invoice\' in table \'aging_piutang_rekap\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAgingPiutangRekapPeriod.no_invoiceColumn] = value;
+                    this[this.tableaging_piutang_rekap.no_invoiceColumn] = value;
                 }
             }
             
@@ -3915,14 +4869,14 @@ namespace report_manajemen.Dataset {
             public string no_kwitansi {
                 get {
                     try {
-                        return ((string)(this[this.tableAgingPiutangRekapPeriod.no_kwitansiColumn]));
+                        return ((string)(this[this.tableaging_piutang_rekap.no_kwitansiColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'no_kwitansi\' in table \'AgingPiutangRekapPeriod\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'no_kwitansi\' in table \'aging_piutang_rekap\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAgingPiutangRekapPeriod.no_kwitansiColumn] = value;
+                    this[this.tableaging_piutang_rekap.no_kwitansiColumn] = value;
                 }
             }
             
@@ -3931,15 +4885,14 @@ namespace report_manajemen.Dataset {
             public string current_year {
                 get {
                     try {
-                        return ((string)(this[this.tableAgingPiutangRekapPeriod.current_yearColumn]));
+                        return ((string)(this[this.tableaging_piutang_rekap.current_yearColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'current_year\' in table \'AgingPiutangRekapPeriod\' is DBNull." +
-                                "", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'current_year\' in table \'aging_piutang_rekap\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAgingPiutangRekapPeriod.current_yearColumn] = value;
+                    this[this.tableaging_piutang_rekap.current_yearColumn] = value;
                 }
             }
             
@@ -3948,14 +4901,14 @@ namespace report_manajemen.Dataset {
             public System.DateTime begin_date {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableAgingPiutangRekapPeriod.begin_dateColumn]));
+                        return ((global::System.DateTime)(this[this.tableaging_piutang_rekap.begin_dateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'begin_date\' in table \'AgingPiutangRekapPeriod\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'begin_date\' in table \'aging_piutang_rekap\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAgingPiutangRekapPeriod.begin_dateColumn] = value;
+                    this[this.tableaging_piutang_rekap.begin_dateColumn] = value;
                 }
             }
             
@@ -3964,14 +4917,14 @@ namespace report_manajemen.Dataset {
             public System.DateTime end_date {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableAgingPiutangRekapPeriod.end_dateColumn]));
+                        return ((global::System.DateTime)(this[this.tableaging_piutang_rekap.end_dateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'end_date\' in table \'AgingPiutangRekapPeriod\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'end_date\' in table \'aging_piutang_rekap\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAgingPiutangRekapPeriod.end_dateColumn] = value;
+                    this[this.tableaging_piutang_rekap.end_dateColumn] = value;
                 }
             }
             
@@ -3980,267 +4933,267 @@ namespace report_manajemen.Dataset {
             public int Periode {
                 get {
                     try {
-                        return ((int)(this[this.tableAgingPiutangRekapPeriod.PeriodeColumn]));
+                        return ((int)(this[this.tableaging_piutang_rekap.PeriodeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Periode\' in table \'AgingPiutangRekapPeriod\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Periode\' in table \'aging_piutang_rekap\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAgingPiutangRekapPeriod.PeriodeColumn] = value;
+                    this[this.tableaging_piutang_rekap.PeriodeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsTgl_TransNull() {
-                return this.IsNull(this.tableAgingPiutangRekapPeriod.Tgl_TransColumn);
+                return this.IsNull(this.tableaging_piutang_rekap.Tgl_TransColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetTgl_TransNull() {
-                this[this.tableAgingPiutangRekapPeriod.Tgl_TransColumn] = global::System.Convert.DBNull;
+                this[this.tableaging_piutang_rekap.Tgl_TransColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsPartner_IDNull() {
-                return this.IsNull(this.tableAgingPiutangRekapPeriod.Partner_IDColumn);
+                return this.IsNull(this.tableaging_piutang_rekap.Partner_IDColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetPartner_IDNull() {
-                this[this.tableAgingPiutangRekapPeriod.Partner_IDColumn] = global::System.Convert.DBNull;
+                this[this.tableaging_piutang_rekap.Partner_IDColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsTipe_InvoiceNull() {
-                return this.IsNull(this.tableAgingPiutangRekapPeriod.Tipe_InvoiceColumn);
+                return this.IsNull(this.tableaging_piutang_rekap.Tipe_InvoiceColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetTipe_InvoiceNull() {
-                this[this.tableAgingPiutangRekapPeriod.Tipe_InvoiceColumn] = global::System.Convert.DBNull;
+                this[this.tableaging_piutang_rekap.Tipe_InvoiceColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsCustomerNull() {
-                return this.IsNull(this.tableAgingPiutangRekapPeriod.CustomerColumn);
+                return this.IsNull(this.tableaging_piutang_rekap.CustomerColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetCustomerNull() {
-                this[this.tableAgingPiutangRekapPeriod.CustomerColumn] = global::System.Convert.DBNull;
+                this[this.tableaging_piutang_rekap.CustomerColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsNo_BuktiNull() {
-                return this.IsNull(this.tableAgingPiutangRekapPeriod.No_BuktiColumn);
+                return this.IsNull(this.tableaging_piutang_rekap.No_BuktiColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetNo_BuktiNull() {
-                this[this.tableAgingPiutangRekapPeriod.No_BuktiColumn] = global::System.Convert.DBNull;
+                this[this.tableaging_piutang_rekap.No_BuktiColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsNo_RefNull() {
-                return this.IsNull(this.tableAgingPiutangRekapPeriod.No_RefColumn);
+                return this.IsNull(this.tableaging_piutang_rekap.No_RefColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetNo_RefNull() {
-                this[this.tableAgingPiutangRekapPeriod.No_RefColumn] = global::System.Convert.DBNull;
+                this[this.tableaging_piutang_rekap.No_RefColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsTipe_PartnerNull() {
-                return this.IsNull(this.tableAgingPiutangRekapPeriod.Tipe_PartnerColumn);
+                return this.IsNull(this.tableaging_piutang_rekap.Tipe_PartnerColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetTipe_PartnerNull() {
-                this[this.tableAgingPiutangRekapPeriod.Tipe_PartnerColumn] = global::System.Convert.DBNull;
+                this[this.tableaging_piutang_rekap.Tipe_PartnerColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsHargaNull() {
-                return this.IsNull(this.tableAgingPiutangRekapPeriod.HargaColumn);
+                return this.IsNull(this.tableaging_piutang_rekap.HargaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetHargaNull() {
-                this[this.tableAgingPiutangRekapPeriod.HargaColumn] = global::System.Convert.DBNull;
+                this[this.tableaging_piutang_rekap.HargaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsTgl_Jatuh_TempoNull() {
-                return this.IsNull(this.tableAgingPiutangRekapPeriod.Tgl_Jatuh_TempoColumn);
+                return this.IsNull(this.tableaging_piutang_rekap.Tgl_Jatuh_TempoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetTgl_Jatuh_TempoNull() {
-                this[this.tableAgingPiutangRekapPeriod.Tgl_Jatuh_TempoColumn] = global::System.Convert.DBNull;
+                this[this.tableaging_piutang_rekap.Tgl_Jatuh_TempoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsTypeTransNull() {
-                return this.IsNull(this.tableAgingPiutangRekapPeriod.TypeTransColumn);
+                return this.IsNull(this.tableaging_piutang_rekap.TypeTransColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetTypeTransNull() {
-                this[this.tableAgingPiutangRekapPeriod.TypeTransColumn] = global::System.Convert.DBNull;
+                this[this.tableaging_piutang_rekap.TypeTransColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Isterm_daysNull() {
-                return this.IsNull(this.tableAgingPiutangRekapPeriod.term_daysColumn);
+                return this.IsNull(this.tableaging_piutang_rekap.term_daysColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setterm_daysNull() {
-                this[this.tableAgingPiutangRekapPeriod.term_daysColumn] = global::System.Convert.DBNull;
+                this[this.tableaging_piutang_rekap.term_daysColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Isreminder_daysNull() {
-                return this.IsNull(this.tableAgingPiutangRekapPeriod.reminder_daysColumn);
+                return this.IsNull(this.tableaging_piutang_rekap.reminder_daysColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setreminder_daysNull() {
-                this[this.tableAgingPiutangRekapPeriod.reminder_daysColumn] = global::System.Convert.DBNull;
+                this[this.tableaging_piutang_rekap.reminder_daysColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsBatas_BayarNull() {
-                return this.IsNull(this.tableAgingPiutangRekapPeriod.Batas_BayarColumn);
+                return this.IsNull(this.tableaging_piutang_rekap.Batas_BayarColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetBatas_BayarNull() {
-                this[this.tableAgingPiutangRekapPeriod.Batas_BayarColumn] = global::System.Convert.DBNull;
+                this[this.tableaging_piutang_rekap.Batas_BayarColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsReminder_BayarNull() {
-                return this.IsNull(this.tableAgingPiutangRekapPeriod.Reminder_BayarColumn);
+                return this.IsNull(this.tableaging_piutang_rekap.Reminder_BayarColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetReminder_BayarNull() {
-                this[this.tableAgingPiutangRekapPeriod.Reminder_BayarColumn] = global::System.Convert.DBNull;
+                this[this.tableaging_piutang_rekap.Reminder_BayarColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsDateTransNull() {
-                return this.IsNull(this.tableAgingPiutangRekapPeriod.DateTransColumn);
+                return this.IsNull(this.tableaging_piutang_rekap.DateTransColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDateTransNull() {
-                this[this.tableAgingPiutangRekapPeriod.DateTransColumn] = global::System.Convert.DBNull;
+                this[this.tableaging_piutang_rekap.DateTransColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Isno_invoiceNull() {
-                return this.IsNull(this.tableAgingPiutangRekapPeriod.no_invoiceColumn);
+                return this.IsNull(this.tableaging_piutang_rekap.no_invoiceColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setno_invoiceNull() {
-                this[this.tableAgingPiutangRekapPeriod.no_invoiceColumn] = global::System.Convert.DBNull;
+                this[this.tableaging_piutang_rekap.no_invoiceColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Isno_kwitansiNull() {
-                return this.IsNull(this.tableAgingPiutangRekapPeriod.no_kwitansiColumn);
+                return this.IsNull(this.tableaging_piutang_rekap.no_kwitansiColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setno_kwitansiNull() {
-                this[this.tableAgingPiutangRekapPeriod.no_kwitansiColumn] = global::System.Convert.DBNull;
+                this[this.tableaging_piutang_rekap.no_kwitansiColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Iscurrent_yearNull() {
-                return this.IsNull(this.tableAgingPiutangRekapPeriod.current_yearColumn);
+                return this.IsNull(this.tableaging_piutang_rekap.current_yearColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setcurrent_yearNull() {
-                this[this.tableAgingPiutangRekapPeriod.current_yearColumn] = global::System.Convert.DBNull;
+                this[this.tableaging_piutang_rekap.current_yearColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Isbegin_dateNull() {
-                return this.IsNull(this.tableAgingPiutangRekapPeriod.begin_dateColumn);
+                return this.IsNull(this.tableaging_piutang_rekap.begin_dateColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setbegin_dateNull() {
-                this[this.tableAgingPiutangRekapPeriod.begin_dateColumn] = global::System.Convert.DBNull;
+                this[this.tableaging_piutang_rekap.begin_dateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Isend_dateNull() {
-                return this.IsNull(this.tableAgingPiutangRekapPeriod.end_dateColumn);
+                return this.IsNull(this.tableaging_piutang_rekap.end_dateColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setend_dateNull() {
-                this[this.tableAgingPiutangRekapPeriod.end_dateColumn] = global::System.Convert.DBNull;
+                this[this.tableaging_piutang_rekap.end_dateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsPeriodeNull() {
-                return this.IsNull(this.tableAgingPiutangRekapPeriod.PeriodeColumn);
+                return this.IsNull(this.tableaging_piutang_rekap.PeriodeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetPeriodeNull() {
-                this[this.tableAgingPiutangRekapPeriod.PeriodeColumn] = global::System.Convert.DBNull;
+                this[this.tableaging_piutang_rekap.PeriodeColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -4773,6 +5726,803 @@ namespace report_manajemen.Dataset {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class bukti_kas_keluarRow : global::System.Data.DataRow {
+            
+            private bukti_kas_keluarDataTable tablebukti_kas_keluar;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal bukti_kas_keluarRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablebukti_kas_keluar = ((bukti_kas_keluarDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime Tanggal_Bukti {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablebukti_kas_keluar.Tanggal_BuktiColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Tanggal Bukti\' in table \'bukti_kas_keluar\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablebukti_kas_keluar.Tanggal_BuktiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string No_Bukti {
+                get {
+                    return ((string)(this[this.tablebukti_kas_keluar.No_BuktiColumn]));
+                }
+                set {
+                    this[this.tablebukti_kas_keluar.No_BuktiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Kode_Kas {
+                get {
+                    try {
+                        return ((string)(this[this.tablebukti_kas_keluar.Kode_KasColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Kode Kas\' in table \'bukti_kas_keluar\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablebukti_kas_keluar.Kode_KasColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Nama_Kas {
+                get {
+                    try {
+                        return ((string)(this[this.tablebukti_kas_keluar.Nama_KasColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Nama Kas\' in table \'bukti_kas_keluar\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablebukti_kas_keluar.Nama_KasColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string No_Akun {
+                get {
+                    try {
+                        return ((string)(this[this.tablebukti_kas_keluar.No_AkunColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'No Akun\' in table \'bukti_kas_keluar\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablebukti_kas_keluar.No_AkunColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Nama_Akun {
+                get {
+                    try {
+                        return ((string)(this[this.tablebukti_kas_keluar.Nama_AkunColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Nama Akun\' in table \'bukti_kas_keluar\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablebukti_kas_keluar.Nama_AkunColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Keterangan2 {
+                get {
+                    try {
+                        return ((string)(this[this.tablebukti_kas_keluar.Keterangan2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Keterangan2\' in table \'bukti_kas_keluar\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablebukti_kas_keluar.Keterangan2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Doc_Reff {
+                get {
+                    try {
+                        return ((string)(this[this.tablebukti_kas_keluar.Doc_ReffColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Doc Reff\' in table \'bukti_kas_keluar\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablebukti_kas_keluar.Doc_ReffColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal Debet {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablebukti_kas_keluar.DebetColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Debet\' in table \'bukti_kas_keluar\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablebukti_kas_keluar.DebetColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Periode {
+                get {
+                    try {
+                        return ((int)(this[this.tablebukti_kas_keluar.PeriodeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Periode\' in table \'bukti_kas_keluar\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablebukti_kas_keluar.PeriodeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Keterangan {
+                get {
+                    try {
+                        return ((string)(this[this.tablebukti_kas_keluar.KeteranganColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Keterangan\' in table \'bukti_kas_keluar\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablebukti_kas_keluar.KeteranganColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string project_id {
+                get {
+                    try {
+                        return ((string)(this[this.tablebukti_kas_keluar.project_idColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'project_id\' in table \'bukti_kas_keluar\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablebukti_kas_keluar.project_idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string project_name {
+                get {
+                    try {
+                        return ((string)(this[this.tablebukti_kas_keluar.project_nameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'project_name\' in table \'bukti_kas_keluar\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablebukti_kas_keluar.project_nameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTanggal_BuktiNull() {
+                return this.IsNull(this.tablebukti_kas_keluar.Tanggal_BuktiColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTanggal_BuktiNull() {
+                this[this.tablebukti_kas_keluar.Tanggal_BuktiColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsKode_KasNull() {
+                return this.IsNull(this.tablebukti_kas_keluar.Kode_KasColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetKode_KasNull() {
+                this[this.tablebukti_kas_keluar.Kode_KasColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNama_KasNull() {
+                return this.IsNull(this.tablebukti_kas_keluar.Nama_KasColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNama_KasNull() {
+                this[this.tablebukti_kas_keluar.Nama_KasColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNo_AkunNull() {
+                return this.IsNull(this.tablebukti_kas_keluar.No_AkunColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNo_AkunNull() {
+                this[this.tablebukti_kas_keluar.No_AkunColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNama_AkunNull() {
+                return this.IsNull(this.tablebukti_kas_keluar.Nama_AkunColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNama_AkunNull() {
+                this[this.tablebukti_kas_keluar.Nama_AkunColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsKeterangan2Null() {
+                return this.IsNull(this.tablebukti_kas_keluar.Keterangan2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetKeterangan2Null() {
+                this[this.tablebukti_kas_keluar.Keterangan2Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDoc_ReffNull() {
+                return this.IsNull(this.tablebukti_kas_keluar.Doc_ReffColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDoc_ReffNull() {
+                this[this.tablebukti_kas_keluar.Doc_ReffColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDebetNull() {
+                return this.IsNull(this.tablebukti_kas_keluar.DebetColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDebetNull() {
+                this[this.tablebukti_kas_keluar.DebetColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPeriodeNull() {
+                return this.IsNull(this.tablebukti_kas_keluar.PeriodeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPeriodeNull() {
+                this[this.tablebukti_kas_keluar.PeriodeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsKeteranganNull() {
+                return this.IsNull(this.tablebukti_kas_keluar.KeteranganColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetKeteranganNull() {
+                this[this.tablebukti_kas_keluar.KeteranganColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isproject_idNull() {
+                return this.IsNull(this.tablebukti_kas_keluar.project_idColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setproject_idNull() {
+                this[this.tablebukti_kas_keluar.project_idColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isproject_nameNull() {
+                return this.IsNull(this.tablebukti_kas_keluar.project_nameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setproject_nameNull() {
+                this[this.tablebukti_kas_keluar.project_nameColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class aging_hutangRow : global::System.Data.DataRow {
+            
+            private aging_hutangDataTable tableaging_hutang;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal aging_hutangRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableaging_hutang = ((aging_hutangDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime Tgl_Trans {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableaging_hutang.Tgl_TransColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Tgl Trans\' in table \'aging_hutang\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableaging_hutang.Tgl_TransColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Partner_ID {
+                get {
+                    try {
+                        return ((string)(this[this.tableaging_hutang.Partner_IDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Partner ID\' in table \'aging_hutang\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableaging_hutang.Partner_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Tipe_Invoice {
+                get {
+                    try {
+                        return ((string)(this[this.tableaging_hutang.Tipe_InvoiceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Tipe Invoice\' in table \'aging_hutang\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableaging_hutang.Tipe_InvoiceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Supplier {
+                get {
+                    try {
+                        return ((string)(this[this.tableaging_hutang.SupplierColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Supplier\' in table \'aging_hutang\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableaging_hutang.SupplierColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string No_Bukti {
+                get {
+                    try {
+                        return ((string)(this[this.tableaging_hutang.No_BuktiColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'No Bukti\' in table \'aging_hutang\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableaging_hutang.No_BuktiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string No_Ref {
+                get {
+                    try {
+                        return ((string)(this[this.tableaging_hutang.No_RefColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'No Ref\' in table \'aging_hutang\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableaging_hutang.No_RefColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Tipe_Partner {
+                get {
+                    try {
+                        return ((string)(this[this.tableaging_hutang.Tipe_PartnerColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Tipe Partner\' in table \'aging_hutang\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableaging_hutang.Tipe_PartnerColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal Harga {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableaging_hutang.HargaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Harga\' in table \'aging_hutang\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableaging_hutang.HargaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime Tgl_Jatuh_Tempo {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableaging_hutang.Tgl_Jatuh_TempoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Tgl Jatuh Tempo\' in table \'aging_hutang\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableaging_hutang.Tgl_Jatuh_TempoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string TypeTrans {
+                get {
+                    try {
+                        return ((string)(this[this.tableaging_hutang.TypeTransColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TypeTrans\' in table \'aging_hutang\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableaging_hutang.TypeTransColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int term_days {
+                get {
+                    try {
+                        return ((int)(this[this.tableaging_hutang.term_daysColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'term_days\' in table \'aging_hutang\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableaging_hutang.term_daysColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int reminder_days {
+                get {
+                    try {
+                        return ((int)(this[this.tableaging_hutang.reminder_daysColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'reminder_days\' in table \'aging_hutang\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableaging_hutang.reminder_daysColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal Batas_Bayar {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableaging_hutang.Batas_BayarColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Batas Bayar\' in table \'aging_hutang\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableaging_hutang.Batas_BayarColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal Reminder_Bayar {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableaging_hutang.Reminder_BayarColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Reminder Bayar\' in table \'aging_hutang\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableaging_hutang.Reminder_BayarColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime DateTrans {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableaging_hutang.DateTransColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DateTrans\' in table \'aging_hutang\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableaging_hutang.DateTransColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTgl_TransNull() {
+                return this.IsNull(this.tableaging_hutang.Tgl_TransColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTgl_TransNull() {
+                this[this.tableaging_hutang.Tgl_TransColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPartner_IDNull() {
+                return this.IsNull(this.tableaging_hutang.Partner_IDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPartner_IDNull() {
+                this[this.tableaging_hutang.Partner_IDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTipe_InvoiceNull() {
+                return this.IsNull(this.tableaging_hutang.Tipe_InvoiceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTipe_InvoiceNull() {
+                this[this.tableaging_hutang.Tipe_InvoiceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSupplierNull() {
+                return this.IsNull(this.tableaging_hutang.SupplierColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSupplierNull() {
+                this[this.tableaging_hutang.SupplierColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNo_BuktiNull() {
+                return this.IsNull(this.tableaging_hutang.No_BuktiColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNo_BuktiNull() {
+                this[this.tableaging_hutang.No_BuktiColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNo_RefNull() {
+                return this.IsNull(this.tableaging_hutang.No_RefColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNo_RefNull() {
+                this[this.tableaging_hutang.No_RefColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTipe_PartnerNull() {
+                return this.IsNull(this.tableaging_hutang.Tipe_PartnerColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTipe_PartnerNull() {
+                this[this.tableaging_hutang.Tipe_PartnerColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsHargaNull() {
+                return this.IsNull(this.tableaging_hutang.HargaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetHargaNull() {
+                this[this.tableaging_hutang.HargaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTgl_Jatuh_TempoNull() {
+                return this.IsNull(this.tableaging_hutang.Tgl_Jatuh_TempoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTgl_Jatuh_TempoNull() {
+                this[this.tableaging_hutang.Tgl_Jatuh_TempoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTypeTransNull() {
+                return this.IsNull(this.tableaging_hutang.TypeTransColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTypeTransNull() {
+                this[this.tableaging_hutang.TypeTransColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isterm_daysNull() {
+                return this.IsNull(this.tableaging_hutang.term_daysColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setterm_daysNull() {
+                this[this.tableaging_hutang.term_daysColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isreminder_daysNull() {
+                return this.IsNull(this.tableaging_hutang.reminder_daysColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setreminder_daysNull() {
+                this[this.tableaging_hutang.reminder_daysColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsBatas_BayarNull() {
+                return this.IsNull(this.tableaging_hutang.Batas_BayarColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetBatas_BayarNull() {
+                this[this.tableaging_hutang.Batas_BayarColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsReminder_BayarNull() {
+                return this.IsNull(this.tableaging_hutang.Reminder_BayarColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetReminder_BayarNull() {
+                this[this.tableaging_hutang.Reminder_BayarColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDateTransNull() {
+                return this.IsNull(this.tableaging_hutang.DateTransColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDateTransNull() {
+                this[this.tableaging_hutang.DateTransColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -4844,22 +6594,22 @@ namespace report_manajemen.Dataset {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class AgingPiutangRekapPeriodRowChangeEvent : global::System.EventArgs {
+        public class aging_piutang_rekapRowChangeEvent : global::System.EventArgs {
             
-            private AgingPiutangRekapPeriodRow eventRow;
+            private aging_piutang_rekapRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public AgingPiutangRekapPeriodRowChangeEvent(AgingPiutangRekapPeriodRow row, global::System.Data.DataRowAction action) {
+            public aging_piutang_rekapRowChangeEvent(aging_piutang_rekapRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public AgingPiutangRekapPeriodRow Row {
+            public aging_piutang_rekapRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -4928,6 +6678,74 @@ namespace report_manajemen.Dataset {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public Laporan_PerkiraanRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class bukti_kas_keluarRowChangeEvent : global::System.EventArgs {
+            
+            private bukti_kas_keluarRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bukti_kas_keluarRowChangeEvent(bukti_kas_keluarRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bukti_kas_keluarRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class aging_hutangRowChangeEvent : global::System.EventArgs {
+            
+            private aging_hutangRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public aging_hutangRowChangeEvent(aging_hutangRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public aging_hutangRow Row {
                 get {
                     return this.eventRow;
                 }

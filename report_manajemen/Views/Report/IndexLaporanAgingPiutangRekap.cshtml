@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "IndexLaporanAgingPiutangRekap";
+}
+
+<h2>IndexLaporanAgingPiutangRekap</h2>
+@using (Html.BeginForm("ShowLaporanAgingPiutangRekap", "Report"))
+{
+    <div class="form-group">
+        <label for="usr">Periode:</label>
+        <input type="text" class="form-control" id="txtPeriode" name="txtPeriode"><br />
+        <label for="usr">Customer:</label>
+        <input type="text" class="form-control" id="txtCustomerName" name="txtCustomerName"><br />
+        <input type="submit" value="Show Report" />
+    </div>
+
+}
